@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B0239BC31B85EC08002801FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BC21B85EC08002801FD /* AppDelegate.swift */; };
-		B0239BC51B85EC08002801FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BC41B85EC08002801FD /* ViewController.swift */; };
-		B0239BC81B85EC08002801FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0239BC61B85EC08002801FD /* Main.storyboard */; };
-		B0239BCA1B85EC08002801FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0239BC91B85EC08002801FD /* Images.xcassets */; };
-		B0239BCD1B85EC08002801FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0239BCB1B85EC08002801FD /* LaunchScreen.xib */; };
 		B0239BD91B85EC08002801FD /* TKSwarmAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BD81B85EC08002801FD /* TKSwarmAlertTests.swift */; };
+		B0239BF11B85EC90002801FD /* BrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE31B85EC90002801FD /* BrightView.swift */; };
+		B0239BF21B85EC90002801FD /* FallingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE41B85EC90002801FD /* FallingAnimationView.swift */; };
+		B0239BF31B85EC90002801FD /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE61B85EC90002801FD /* CGRectEx.swift */; };
+		B0239BF41B85EC90002801FD /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE71B85EC90002801FD /* DynamicBlurView.swift */; };
+		B0239BF51B85EC90002801FD /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE81B85EC90002801FD /* NSTimerEx.swift */; };
+		B0239BF61B85EC90002801FD /* TKSwarmAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE91B85EC90002801FD /* TKSwarmAlert.swift */; };
+		B0239BF71B85EC90002801FD /* TKSWBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BEA1B85EC90002801FD /* TKSWBackgroundView.swift */; };
+		B0239BF81B85EC90002801FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BEC1B85EC90002801FD /* AppDelegate.swift */; };
+		B0239BF91B85EC90002801FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0239BED1B85EC90002801FD /* Images.xcassets */; };
+		B0239BFA1B85EC90002801FD /* SampleDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BEE1B85EC90002801FD /* SampleDesignView.swift */; };
+		B0239BFB1B85EC90002801FD /* ViewController+SampleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BEF1B85EC90002801FD /* ViewController+SampleViews.swift */; };
+		B0239BFC1B85EC90002801FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BF01B85EC90002801FD /* ViewController.swift */; };
+		B0239C021B85ECA4002801FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0239BFE1B85ECA4002801FD /* LaunchScreen.xib */; };
+		B0239C031B85ECA4002801FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0239C001B85ECA4002801FD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +37,23 @@
 /* Begin PBXFileReference section */
 		B0239BBD1B85EC08002801FD /* TKSwarmAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKSwarmAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0239BC11B85EC08002801FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0239BC21B85EC08002801FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0239BC41B85EC08002801FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B0239BC71B85EC08002801FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B0239BC91B85EC08002801FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B0239BCC1B85EC08002801FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B0239BD21B85EC08002801FD /* TKSwarmAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKSwarmAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0239BD71B85EC08002801FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0239BD81B85EC08002801FD /* TKSwarmAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSwarmAlertTests.swift; sourceTree = "<group>"; };
+		B0239BE31B85EC90002801FD /* BrightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightView.swift; sourceTree = "<group>"; };
+		B0239BE41B85EC90002801FD /* FallingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingAnimationView.swift; sourceTree = "<group>"; };
+		B0239BE61B85EC90002801FD /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		B0239BE71B85EC90002801FD /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
+		B0239BE81B85EC90002801FD /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
+		B0239BE91B85EC90002801FD /* TKSwarmAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSwarmAlert.swift; sourceTree = "<group>"; };
+		B0239BEA1B85EC90002801FD /* TKSWBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSWBackgroundView.swift; sourceTree = "<group>"; };
+		B0239BEC1B85EC90002801FD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0239BED1B85EC90002801FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B0239BEE1B85EC90002801FD /* SampleDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDesignView.swift; sourceTree = "<group>"; };
+		B0239BEF1B85EC90002801FD /* ViewController+SampleViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SampleViews.swift"; sourceTree = "<group>"; };
+		B0239BF01B85EC90002801FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0239BFF1B85ECA4002801FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		B0239C011B85ECA4002801FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +95,8 @@
 		B0239BBF1B85EC08002801FD /* TKSwarmAlert */ = {
 			isa = PBXGroup;
 			children = (
-				B0239BC21B85EC08002801FD /* AppDelegate.swift */,
-				B0239BC41B85EC08002801FD /* ViewController.swift */,
-				B0239BC61B85EC08002801FD /* Main.storyboard */,
-				B0239BC91B85EC08002801FD /* Images.xcassets */,
-				B0239BCB1B85EC08002801FD /* LaunchScreen.xib */,
+				B0239BE21B85EC90002801FD /* Classes */,
+				B0239BEB1B85EC90002801FD /* Examples */,
 				B0239BC01B85EC08002801FD /* Supporting Files */,
 			);
 			path = TKSwarmAlert;
@@ -110,6 +125,50 @@
 				B0239BD71B85EC08002801FD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0239BE21B85EC90002801FD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B0239BE51B85EC90002801FD /* helper */,
+				B0239BE31B85EC90002801FD /* BrightView.swift */,
+				B0239BE41B85EC90002801FD /* FallingAnimationView.swift */,
+				B0239BE91B85EC90002801FD /* TKSwarmAlert.swift */,
+				B0239BEA1B85EC90002801FD /* TKSWBackgroundView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B0239BE51B85EC90002801FD /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				B0239BE61B85EC90002801FD /* CGRectEx.swift */,
+				B0239BE71B85EC90002801FD /* DynamicBlurView.swift */,
+				B0239BE81B85EC90002801FD /* NSTimerEx.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		B0239BEB1B85EC90002801FD /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				B0239BFD1B85ECA4002801FD /* Base.lproj */,
+				B0239BEC1B85EC90002801FD /* AppDelegate.swift */,
+				B0239BED1B85EC90002801FD /* Images.xcassets */,
+				B0239BEE1B85EC90002801FD /* SampleDesignView.swift */,
+				B0239BEF1B85EC90002801FD /* ViewController+SampleViews.swift */,
+				B0239BF01B85EC90002801FD /* ViewController.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		B0239BFD1B85ECA4002801FD /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B0239BFE1B85ECA4002801FD /* LaunchScreen.xib */,
+				B0239C001B85ECA4002801FD /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0239BC81B85EC08002801FD /* Main.storyboard in Resources */,
-				B0239BCD1B85EC08002801FD /* LaunchScreen.xib in Resources */,
-				B0239BCA1B85EC08002801FD /* Images.xcassets in Resources */,
+				B0239C031B85ECA4002801FD /* Main.storyboard in Resources */,
+				B0239C021B85ECA4002801FD /* LaunchScreen.xib in Resources */,
+				B0239BF91B85EC90002801FD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +271,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0239BC51B85EC08002801FD /* ViewController.swift in Sources */,
-				B0239BC31B85EC08002801FD /* AppDelegate.swift in Sources */,
+				B0239BFA1B85EC90002801FD /* SampleDesignView.swift in Sources */,
+				B0239BF81B85EC90002801FD /* AppDelegate.swift in Sources */,
+				B0239BF71B85EC90002801FD /* TKSWBackgroundView.swift in Sources */,
+				B0239BF11B85EC90002801FD /* BrightView.swift in Sources */,
+				B0239BFC1B85EC90002801FD /* ViewController.swift in Sources */,
+				B0239BF41B85EC90002801FD /* DynamicBlurView.swift in Sources */,
+				B0239BF61B85EC90002801FD /* TKSwarmAlert.swift in Sources */,
+				B0239BF31B85EC90002801FD /* CGRectEx.swift in Sources */,
+				B0239BF51B85EC90002801FD /* NSTimerEx.swift in Sources */,
+				B0239BFB1B85EC90002801FD /* ViewController+SampleViews.swift in Sources */,
+				B0239BF21B85EC90002801FD /* FallingAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,20 +304,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B0239BC61B85EC08002801FD /* Main.storyboard */ = {
+		B0239BFE1B85ECA4002801FD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B0239BC71B85EC08002801FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B0239BCB1B85EC08002801FD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B0239BCC1B85EC08002801FD /* Base */,
+				B0239BFF1B85ECA4002801FD /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B0239C001B85ECA4002801FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0239C011B85ECA4002801FD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

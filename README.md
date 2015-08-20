@@ -11,7 +11,7 @@
 Animation Tool for Alert like [Swarm](https://swarmapp.com/) app.
 
 # ScreenShot
-![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/bright.gif "Demo GIF Animation")
+![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/minidemo.gif "Demo GIF Animation")
 
 <!-- You can play demo at [appetize.io](https://appetize.io/app/hbj0vawpk8uw9z00838vz5he4g). -->
 

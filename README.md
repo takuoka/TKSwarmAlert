@@ -26,6 +26,11 @@ pod 'TKSwarmAlert'
 
 # Usage
 
+``` swift
+import TKSwarmAlert
+```
+
+
 ## Show
 
 ``` swift

@@ -45,14 +45,13 @@ alert.addNextViews(yourViews3)
 
 ## Static Views
 You can also add non-animated views to alert view.
+Please use this method before "show".
 
 ``` swift
 alert.addSubStaticView(yourStaticView)
 ```
 
 ![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/static.gif "Demo GIF Animation")
-
-Note: Please use "addSubStaticView" before "show".
 
 
 ## Event Handler

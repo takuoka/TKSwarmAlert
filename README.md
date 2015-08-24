@@ -35,7 +35,7 @@ import TKSwarmAlert
 
 ``` swift
 let alert = TKSwarmAlert()
-alert.show(type: SWBackgroundType.Blur, views: yourViews)
+alert.show(type: TKSWBackgroundType.Blur, views: yourViews)
 
 // If you want
 alert.addNextViews(yourViews2)
@@ -62,7 +62,7 @@ alert.didDissmissAllViews = {
 ```
 
 
-# SWBackGroundType
+# TKSWBackgroundType
 
 ## .TransparentBlack
 ![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/black.gif "Demo GIF Animation")
@@ -79,3 +79,4 @@ alert.didDissmissAllViews = {
 So, you can add original view.
 
 ![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/your.gif "Demo GIF Animation")
+

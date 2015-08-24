@@ -17,8 +17,6 @@ Animation Tool for Alert like [Swarm](https://swarmapp.com/) app.
 
 # Installation
 
-Comming soon.
-
 You can install this to your project via CocoaPods.
 
 ```

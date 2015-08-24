@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01B10CF1B8BDBB7003DCD82 /* SimplestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B10CE1B8BDBB7003DCD82 /* SimplestExample.swift */; };
 		B0239BD91B85EC08002801FD /* TKSwarmAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BD81B85EC08002801FD /* TKSwarmAlertTests.swift */; };
 		B0239BF11B85EC90002801FD /* BrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE31B85EC90002801FD /* BrightView.swift */; };
 		B0239BF21B85EC90002801FD /* FallingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239BE41B85EC90002801FD /* FallingAnimationView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B01B10CE1B8BDBB7003DCD82 /* SimplestExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplestExample.swift; sourceTree = "<group>"; };
 		B0239BBD1B85EC08002801FD /* TKSwarmAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKSwarmAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0239BC11B85EC08002801FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0239BD21B85EC08002801FD /* TKSwarmAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKSwarmAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 				B0239BED1B85EC90002801FD /* Images.xcassets */,
 				B0239BEE1B85EC90002801FD /* SampleDesignView.swift */,
 				B0239BEF1B85EC90002801FD /* ViewController+SampleViews.swift */,
+				B01B10CE1B8BDBB7003DCD82 /* SimplestExample.swift */,
 				B0239BF01B85EC90002801FD /* ViewController.swift */,
 			);
 			path = Examples;
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0239BFA1B85EC90002801FD /* SampleDesignView.swift in Sources */,
+				B01B10CF1B8BDBB7003DCD82 /* SimplestExample.swift in Sources */,
 				B0239BF81B85EC90002801FD /* AppDelegate.swift in Sources */,
 				B0239BF71B85EC90002801FD /* TKSWBackgroundView.swift in Sources */,
 				B0239BF11B85EC90002801FD /* BrightView.swift in Sources */,
@@ -479,6 +483,7 @@
 				B0239BDE1B85EC08002801FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0239BDF1B85EC08002801FD /* Build configuration list for PBXNativeTarget "TKSwarmAlertTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +492,7 @@
 				B0239BE11B85EC08002801FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

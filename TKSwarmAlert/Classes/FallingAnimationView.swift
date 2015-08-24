@@ -159,8 +159,6 @@ class FallingAnimationView: UIView {
         //drop
         collisionAll()
         snap(views)
-        
-        println(allViews)
     }
     
     func spawnNextViews() {

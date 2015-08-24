@@ -6,14 +6,6 @@
 //  Copyright (c) 2015年 Uniface. All rights reserved.
 //
 
-/*
-TODO
-
-FIX
-*動的ブラーと静的ブラーどっちも使えるようにする(Podで依存かく)
-
-*/
-
 
 import UIKit
 
@@ -39,7 +31,7 @@ class TKSWBackgroundView: DynamicBlurView {
         self.hidden = true
         self.blurRadius = 0
         transparentBlackView.frame = frame
-        transparentBlackView.backgroundColor = UIColor.blackColor()//.colorWithAlphaComponent(blackAlphaForBlur)
+        transparentBlackView.backgroundColor = UIColor.blackColor()
         transparentBlackView.alpha = 0
         self.addSubview(transparentBlackView)
     }

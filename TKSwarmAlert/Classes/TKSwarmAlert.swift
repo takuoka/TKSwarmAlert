@@ -17,6 +17,10 @@ public class TKSwarmAlert {
     private var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
+
+    public init() {
+        
+    }
     
     public func addNextViews(views:[UIView]) {
         self.animationView?.nextViewsList.append(views)

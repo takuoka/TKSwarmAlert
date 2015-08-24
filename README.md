@@ -50,10 +50,9 @@ You can also add non-animated views to alert view.
 alert.addSubStaticView(yourStaticView)
 ```
 
-Please use "addSubStaticView" before "show".
-
-
 ![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/static.gif "Demo GIF Animation")
+
+Note: Please use "addSubStaticView" before "show".
 
 
 ## Event Handler

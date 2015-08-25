@@ -19,7 +19,7 @@ Animation Tool for Alert like [Swarm](https://swarmapp.com/) app.
 
 You can install this to your project via CocoaPods.
 
-```
+``` ruby
 pod 'TKSwarmAlert'
 ```
 

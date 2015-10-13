@@ -62,7 +62,7 @@ class FallingAnimationView: UIView {
             return animationView.subviews.filter({ (view: AnyObject) -> Bool in
 //                view.dynamicType === UIView.self
                 view is UIView
-            }) as! [UIView]
+            }) 
         }
     }
     var animatedViews:[UIView] {
@@ -182,7 +182,7 @@ class FallingAnimationView: UIView {
             )
             var anchorPoint: CGPoint = gesture.locationInView(gestureView.superview)
             attachmentBehavior = UIAttachmentBehavior(item: gestureView, offsetFromCenter: offsetFromCenter, attachedToAnchor: anchorPoint)
-            self.animator.addBehavior(attachmentBehavior)
+            self.animator.addBehavior(attachmentBehavior!)
         }
         else if gesture.state == UIGestureRecognizerState.Changed {
             // drag move
@@ -338,7 +338,7 @@ class FallingAnimationView: UIView {
         return minimumTop
     }
     
-    func distance(#from:CGPoint, to:CGPoint) -> CGFloat {
+    func distance(from from:CGPoint, to:CGPoint) -> CGFloat {
         let xDist = (to.x - from.x)
         let yDist = (to.y - from.y)
         return sqrt((xDist * xDist) + (yDist * yDist))

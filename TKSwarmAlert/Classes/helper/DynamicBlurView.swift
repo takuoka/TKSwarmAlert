@@ -115,7 +115,7 @@ public class DynamicBlurView: UIView {
         }
     }
     
-    public override func actionForLayer(layer: CALayer!, forKey event: String!) -> CAAction! {
+    public override func actionForLayer(layer: CALayer, forKey event: String) -> CAAction? {
         if event == "blurRadius" {
             fromBlurRadius = nil
             
@@ -150,7 +150,7 @@ public class DynamicBlurView: UIView {
         return super.actionForLayer(layer, forKey: event)
     }
     
-    public override func displayLayer(layer: CALayer!) {
+    public override func displayLayer(layer: CALayer) {
         let blurRadius: CGFloat
         
         if let radius = fromBlurRadius {
@@ -193,7 +193,7 @@ public class DynamicBlurView: UIView {
     }
     
     private func setCaptureImage(image: UIImage, radius: CGFloat) {
-        var setImage: (() -> Void) = {
+        let setImage: (() -> Void) = {
             if let blurredImage = image.blurredImage(radius, iterations: self.iterations, ratio: self.blurRatio, blendColor: self.blendColor) {
                 dispatch_sync(dispatch_get_main_queue()) {
                     self.setContentImage(blurredImage)
@@ -234,7 +234,7 @@ public class DynamicBlurView: UIView {
     }
     
     private func restoreLayer(layers: [CALayer]) {
-        layers.map { $0.hidden = false }
+        _ = layers.map { $0.hidden = false }
     }
     
     private func capturedImage() -> UIImage! {
@@ -315,7 +315,7 @@ public extension UIImage {
         memcpy(inBuffer.data, source, bytes)
         
         let flags = vImage_Flags(kvImageEdgeExtend)
-        for index in 0 ..< iterations {
+        for _ in 0 ..< iterations {
             vImageBoxConvolve_ARGB8888(&inBuffer, &outBuffer, tempBuffer, 0, 0, boxSize, boxSize, nil, flags)
             
             let temp = inBuffer.data

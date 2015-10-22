@@ -31,7 +31,7 @@ public class TKSwarmAlert {
         self.staticViews.append(view)
     }
     
-    public func show(#type:TKSWBackgroundType ,views:[UIView]) {
+    public func show(type type:TKSWBackgroundType ,views:[UIView]) {
         let window:UIWindow? = UIApplication.sharedApplication().keyWindow
         if window != nil {
             let frame:CGRect = window!.bounds

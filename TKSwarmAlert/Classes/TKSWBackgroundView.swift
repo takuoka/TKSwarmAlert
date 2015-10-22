@@ -40,19 +40,19 @@ class TKSWBackgroundView: DynamicBlurView {
     }
     
     
-    func show(#type:TKSWBackgroundType, duration:NSTimeInterval = 0.2, didEnd:Closure? = nil) {
+    func show(type type:TKSWBackgroundType, duration:NSTimeInterval = 0.2, didEnd:Closure? = nil) {
         if duration != 0.2 {
             self.blurDuration = duration
         }
         
         switch type {
         case .Blur:
-            showBlur(didEnd: didEnd)
+            showBlur(didEnd)
         case .BrightBlur:
-            showBrightBlur(didEnd: didEnd)
+            showBrightBlur(didEnd)
         case let .TransparentBlack(alpha):
             self.blackAlphaForBlur = alpha
-            showTransparentBlack(didEnd: didEnd)
+            showTransparentBlack(didEnd)
         }
     }
     

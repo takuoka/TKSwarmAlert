@@ -62,7 +62,7 @@ class FallingAnimationView: UIView {
             return animationView.subviews.filter({ (view: AnyObject) -> Bool in
 //                view.dynamicType === UIView.self
                 view is UIView
-            }) as! [UIView]
+            }) 
         }
     }
     var animatedViews:[UIView] {
@@ -175,18 +175,18 @@ class FallingAnimationView: UIView {
             snapAll()
             fallAndRemove(unCurrentAnimationViews)
             // drag start
-            var gripPoint: CGPoint = gesture.locationInView(gestureView)
-            var offsetFromCenter: UIOffset = UIOffsetMake(
+            let gripPoint: CGPoint = gesture.locationInView(gestureView)
+            let offsetFromCenter: UIOffset = UIOffsetMake(
                 gripPoint.x - gestureView.bounds.size.width  / 2.0,
                 gripPoint.y - gestureView.bounds.size.height / 2.0
             )
-            var anchorPoint: CGPoint = gesture.locationInView(gestureView.superview)
+            let anchorPoint: CGPoint = gesture.locationInView(gestureView.superview)
             attachmentBehavior = UIAttachmentBehavior(item: gestureView, offsetFromCenter: offsetFromCenter, attachedToAnchor: anchorPoint)
-            self.animator.addBehavior(attachmentBehavior)
+            self.animator.addBehavior(attachmentBehavior!)
         }
         else if gesture.state == UIGestureRecognizerState.Changed {
             // drag move
-            var touchPoint: CGPoint = gesture.locationInView(gestureView.superview)
+            let touchPoint: CGPoint = gesture.locationInView(gestureView.superview)
             attachmentBehavior?.anchorPoint = touchPoint
         }
         else if gesture.state == UIGestureRecognizerState.Ended {
@@ -194,10 +194,10 @@ class FallingAnimationView: UIView {
             self.animator.removeAllBehaviors()
             collisionAll()
             // judge if fall
-            var touchPoint: CGPoint = gesture.locationInView(gestureView.superview)
-            var movedDistance = distance(from: startPoints[gestureView.tag], to: touchPoint)
+            let touchPoint: CGPoint = gesture.locationInView(gestureView.superview)
+            let movedDistance = distance(from: startPoints[gestureView.tag], to: touchPoint)
             if movedDistance < snapBackDistance {// not fall
-                var snap = UISnapBehavior(item: gestureView, snapToPoint: startPoints[gestureView.tag])
+                let snap = UISnapBehavior(item: gestureView, snapToPoint: startPoints[gestureView.tag])
                 self.animator.addBehavior(snap)
             }
             else {
@@ -206,8 +206,8 @@ class FallingAnimationView: UIView {
                 }
                 else {// fall
                     // velocity
-                    var pushBehavior = UIPushBehavior(items: [gestureView], mode: UIPushBehaviorMode.Instantaneous)
-                    var velocity: CGPoint = gesture.velocityInView(gestureView.superview)
+                    let pushBehavior = UIPushBehavior(items: [gestureView], mode: UIPushBehaviorMode.Instantaneous)
+                    let velocity: CGPoint = gesture.velocityInView(gestureView.superview)
                     pushBehavior.pushDirection = CGVectorMake((velocity.x / 900), (velocity.y / 900))
                     self.animator.addBehavior(pushBehavior)
                     
@@ -253,13 +253,13 @@ class FallingAnimationView: UIView {
     }
     func snap(views:[UIView]) {
         for v in views {
-            var snap = UISnapBehavior(item: v, snapToPoint: startPoints[v.tag])
+            let snap = UISnapBehavior(item: v, snapToPoint: startPoints[v.tag])
             self.animator.addBehavior(snap)
         }
     }
     
     func fallAndRemove(views:[UIView]) {
-        var gravity = UIGravityBehavior(items: views)
+        let gravity = UIGravityBehavior(items: views)
         gravity.magnitude = gravityMagniture
         gravity.action = { [weak self] in
             if self != nil {
@@ -296,7 +296,7 @@ class FallingAnimationView: UIView {
         for v in allViews {
             if let recognizers = v.gestureRecognizers {
                 for recognizer in recognizers {
-                    v.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+                    v.removeGestureRecognizer(recognizer)
                 }
             }
         }
@@ -310,7 +310,7 @@ class FallingAnimationView: UIView {
     func disableTapGesture() {
         if let recognizers = self.gestureRecognizers {
             for recognizer in recognizers {
-                self.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+                self.removeGestureRecognizer(recognizer)
             }
         }
 
@@ -320,7 +320,7 @@ class FallingAnimationView: UIView {
     }
 
     func dev_makeLine(v: UIView) {
-        var lineView = UIView(frame: v.frame)
+        let lineView = UIView(frame: v.frame)
         lineView.backgroundColor = UIColor.clearColor()
         lineView.layer.borderColor = UIColor.blueColor().colorWithAlphaComponent(0.2).CGColor
         lineView.layer.borderWidth = 1
@@ -338,7 +338,7 @@ class FallingAnimationView: UIView {
         return minimumTop
     }
     
-    func distance(#from:CGPoint, to:CGPoint) -> CGFloat {
+    func distance(from from:CGPoint, to:CGPoint) -> CGFloat {
         let xDist = (to.x - from.x)
         let yDist = (to.y - from.y)
         return sqrt((xDist * xDist) + (yDist * yDist))

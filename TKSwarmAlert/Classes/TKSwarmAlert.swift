@@ -63,7 +63,7 @@ public class TKSwarmAlert {
                     }
                 }
                 UIView.animateWithDuration(fadeOutDuration) {
-                    blurView?.alpha = 0
+                    self.blurView?.alpha = 0
                 }
             }
             animationView?.didDissmissAllViews = {

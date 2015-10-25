@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TKSwarmAlert"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Animated Alert Library like \"Swarm\" app."
 
 

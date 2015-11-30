@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TKSwarmAlert.xcscheme</key>
+		<key>TKSwarmAlertExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B0239BBC1B85EC08002801FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0239BD11B85EC08002801FD</key>
+		<key>B00FB0251C0C0D470085EEF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

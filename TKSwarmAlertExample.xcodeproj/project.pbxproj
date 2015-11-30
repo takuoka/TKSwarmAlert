@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00FB04F1C0C0D810085EEF5 /* BrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03C1C0C0D810085EEF5 /* BrightView.swift */; };
+		B00FB0501C0C0D810085EEF5 /* FallingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */; };
+		B00FB0511C0C0D810085EEF5 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */; };
+		B00FB0521C0C0D810085EEF5 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */; };
+		B00FB0531C0C0D810085EEF5 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */; };
+		B00FB0541C0C0D810085EEF5 /* TKSwarmAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */; };
+		B00FB0551C0C0D810085EEF5 /* TKSWBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */; };
+		B00FB0561C0C0D810085EEF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */; };
+		B00FB0571C0C0D810085EEF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */; };
+		B00FB0581C0C0D810085EEF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00FB0481C0C0D810085EEF5 /* Main.storyboard */; };
+		B00FB0591C0C0D810085EEF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00FB04A1C0C0D810085EEF5 /* Images.xcassets */; };
+		B00FB05A1C0C0D810085EEF5 /* SampleDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */; };
+		B00FB05B1C0C0D810085EEF5 /* SimplestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */; };
+		B00FB05C1C0C0D810085EEF5 /* ViewController+SampleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */; };
+		B00FB05D1C0C0D810085EEF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04E1C0C0D810085EEF5 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKSwarmAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00FB03C1C0C0D810085EEF5 /* BrightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightView.swift; sourceTree = "<group>"; };
+		B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingAnimationView.swift; sourceTree = "<group>"; };
+		B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
+		B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
+		B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSwarmAlert.swift; sourceTree = "<group>"; };
+		B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSWBackgroundView.swift; sourceTree = "<group>"; };
+		B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B00FB0471C0C0D810085EEF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B00FB0491C0C0D810085EEF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B00FB04A1C0C0D810085EEF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDesignView.swift; sourceTree = "<group>"; };
+		B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplestExample.swift; sourceTree = "<group>"; };
+		B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SampleViews.swift"; sourceTree = "<group>"; };
+		B00FB04E1C0C0D810085EEF5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B00FB0231C0C0D470085EEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B00FB01D1C0C0D470085EEF5 = {
+			isa = PBXGroup;
+			children = (
+				B00FB0281C0C0D470085EEF5 /* TKSwarmAlertExample */,
+				B00FB0271C0C0D470085EEF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B00FB0271C0C0D470085EEF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B00FB0281C0C0D470085EEF5 /* TKSwarmAlertExample */ = {
+			isa = PBXGroup;
+			children = (
+				B00FB03B1C0C0D810085EEF5 /* Classes */,
+				B00FB0441C0C0D810085EEF5 /* Examples */,
+			);
+			path = TKSwarmAlertExample;
+			sourceTree = "<group>";
+		};
+		B00FB03B1C0C0D810085EEF5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B00FB03C1C0C0D810085EEF5 /* BrightView.swift */,
+				B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */,
+				B00FB03E1C0C0D810085EEF5 /* helper */,
+				B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */,
+				B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */,
+			);
+			name = Classes;
+			path = TKSwarmAlert/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		B00FB03E1C0C0D810085EEF5 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */,
+				B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */,
+				B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		B00FB0441C0C0D810085EEF5 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */,
+				B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */,
+				B00FB0481C0C0D810085EEF5 /* Main.storyboard */,
+				B00FB04A1C0C0D810085EEF5 /* Images.xcassets */,
+				B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */,
+				B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */,
+				B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */,
+				B00FB04E1C0C0D810085EEF5 /* ViewController.swift */,
+			);
+			name = Examples;
+			path = TKSwarmAlert/Examples;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B00FB0251C0C0D470085EEF5 /* TKSwarmAlertExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00FB0381C0C0D470085EEF5 /* Build configuration list for PBXNativeTarget "TKSwarmAlertExample" */;
+			buildPhases = (
+				B00FB0221C0C0D470085EEF5 /* Sources */,
+				B00FB0231C0C0D470085EEF5 /* Frameworks */,
+				B00FB0241C0C0D470085EEF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKSwarmAlertExample;
+			productName = TKSwarmAlertExample;
+			productReference = B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B00FB01E1C0C0D470085EEF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "岡本拓也";
+				TargetAttributes = {
+					B00FB0251C0C0D470085EEF5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = B00FB0211C0C0D470085EEF5 /* Build configuration list for PBXProject "TKSwarmAlertExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B00FB01D1C0C0D470085EEF5;
+			productRefGroup = B00FB0271C0C0D470085EEF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B00FB0251C0C0D470085EEF5 /* TKSwarmAlertExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B00FB0241C0C0D470085EEF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00FB0591C0C0D810085EEF5 /* Images.xcassets in Resources */,
+				B00FB0571C0C0D810085EEF5 /* LaunchScreen.xib in Resources */,
+				B00FB0581C0C0D810085EEF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B00FB0221C0C0D470085EEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00FB05A1C0C0D810085EEF5 /* SampleDesignView.swift in Sources */,
+				B00FB05B1C0C0D810085EEF5 /* SimplestExample.swift in Sources */,
+				B00FB0561C0C0D810085EEF5 /* AppDelegate.swift in Sources */,
+				B00FB04F1C0C0D810085EEF5 /* BrightView.swift in Sources */,
+				B00FB0521C0C0D810085EEF5 /* DynamicBlurView.swift in Sources */,
+				B00FB0541C0C0D810085EEF5 /* TKSwarmAlert.swift in Sources */,
+				B00FB05D1C0C0D810085EEF5 /* ViewController.swift in Sources */,
+				B00FB0511C0C0D810085EEF5 /* CGRectEx.swift in Sources */,
+				B00FB0551C0C0D810085EEF5 /* TKSWBackgroundView.swift in Sources */,
+				B00FB0531C0C0D810085EEF5 /* NSTimerEx.swift in Sources */,
+				B00FB05C1C0C0D810085EEF5 /* ViewController+SampleViews.swift in Sources */,
+				B00FB0501C0C0D810085EEF5 /* FallingAnimationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B00FB0471C0C0D810085EEF5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B00FB0481C0C0D810085EEF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B00FB0491C0C0D810085EEF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B00FB0361C0C0D470085EEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B00FB0371C0C0D470085EEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B00FB0391C0C0D470085EEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlertExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B00FB03A1C0C0D470085EEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlertExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B00FB0211C0C0D470085EEF5 /* Build configuration list for PBXProject "TKSwarmAlertExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00FB0361C0C0D470085EEF5 /* Debug */,
+				B00FB0371C0C0D470085EEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00FB0381C0C0D470085EEF5 /* Build configuration list for PBXNativeTarget "TKSwarmAlertExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00FB0391C0C0D470085EEF5 /* Debug */,
+				B00FB03A1C0C0D470085EEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B00FB01E1C0C0D470085EEF5 /* Project object */;
+}

@@ -57,6 +57,8 @@ class FallingAnimationView: UIView {
     var currentAnimationViewTags: [Int] = []
     var nextViewsList: [[UIView]] = []
     
+    var enableToTapSuperView: Bool = true
+
     var allViews: [UIView] {
         get {
             return animationView.subviews.filter({ (view: AnyObject) -> Bool in
@@ -219,14 +221,16 @@ class FallingAnimationView: UIView {
     }
     
     func onTapSuperView() {
-        animator.removeAllBehaviors()
-        disableTapGesture()
-        if nextViewsList.count != 0 {//next
-            spawnNextViews()
-        }
-        else {
-            disableDragGesture()
-            fallAndRemoveAll()
+        if enableToTapSuperView {
+            animator.removeAllBehaviors()
+            disableTapGesture()
+            if nextViewsList.count != 0 {//next
+                spawnNextViews()
+            }
+            else {
+                disableDragGesture()
+                fallAndRemoveAll()
+            }
         }
     }
     

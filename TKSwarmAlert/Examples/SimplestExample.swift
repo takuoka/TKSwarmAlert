@@ -27,6 +27,8 @@ class SimpleViewController: UIViewController {
         
         NSTimer.schedule(delay: 1) { timer in
             let alert = TKSwarmAlert()
+            alert.durationOfPreventingTapBackgroundArea = 3
+
             alert.addSubStaticView(staticView)
             alert.show(type: TKSWBackgroundType.Blur, views: [view])
             

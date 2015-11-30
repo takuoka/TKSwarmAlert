@@ -12,12 +12,14 @@ public typealias Closure=()->Void
 
 public class TKSwarmAlert {
     
+    public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
     public var didDissmissAllViews: Closure?
 
     private var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
 
+    
     public init() {
         
     }
@@ -38,6 +40,12 @@ public class TKSwarmAlert {
             blurView = TKSWBackgroundView(frame: frame)
             animationView = FallingAnimationView(frame: frame)
             
+            if durationOfPreventingTapBackgroundArea > 0 {
+                animationView?.enableToTapSuperView = false
+                NSTimer.schedule(delay: durationOfPreventingTapBackgroundArea) { [weak self] _ in
+                    self?.animationView?.enableToTapSuperView = true
+                }
+            }
             
             let showDuration:NSTimeInterval = 0.2
 

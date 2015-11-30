@@ -79,7 +79,7 @@ class TKSWBackgroundView: DynamicBlurView {
     }
     
     func showBrightBlur(didEnd:Closure? = nil) {
-        self.brightView = BrightView(frame: self.frame, center: CGPoint(x: self.center.x, y: self.center.y * 0.6))
+        self.brightView = BrightView(frame: self.frame, center: CGPoint(x: self.center.x, y: self.center.y * 0.5))
         self.insertSubview(brightView!, aboveSubview: transparentBlackView)
         showBlur() {
             self.brightView?.rotateAnimation()

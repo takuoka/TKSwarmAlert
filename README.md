@@ -1,5 +1,7 @@
+
 # TKSwarmAlert
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
@@ -17,10 +19,12 @@ Animation Tool for Alert like [Swarm](https://swarmapp.com/) app.
 
 # Installation
 
-You can install this to your project via CocoaPods.
-
 ``` ruby
 pod 'TKSwarmAlert'
+```
+
+``` ruby
+github "entotsu/TKSwarmAlert"
 ```
 
 
@@ -80,4 +84,3 @@ alert.didDissmissAllViews = {
 So, you can add original view.
 
 ![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/your.gif "Demo GIF Animation")
-

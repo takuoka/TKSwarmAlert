@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import TKSwarmAlert
 
 
 class SimpleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("view did load of simple view controller")
         
         let view = UIView()
         view.backgroundColor = UIColor.redColor()
@@ -33,3 +36,5 @@ class SimpleViewController: UIViewController {
         }
     }
 }
+
+

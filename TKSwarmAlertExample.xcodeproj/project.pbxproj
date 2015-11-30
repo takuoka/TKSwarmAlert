@@ -7,22 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B00FB04F1C0C0D810085EEF5 /* BrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03C1C0C0D810085EEF5 /* BrightView.swift */; };
-		B00FB0501C0C0D810085EEF5 /* FallingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */; };
-		B00FB0511C0C0D810085EEF5 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */; };
-		B00FB0521C0C0D810085EEF5 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */; };
-		B00FB0531C0C0D810085EEF5 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */; };
-		B00FB0541C0C0D810085EEF5 /* TKSwarmAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */; };
-		B00FB0551C0C0D810085EEF5 /* TKSWBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */; };
-		B00FB0561C0C0D810085EEF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */; };
-		B00FB0571C0C0D810085EEF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */; };
-		B00FB0581C0C0D810085EEF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00FB0481C0C0D810085EEF5 /* Main.storyboard */; };
 		B00FB0591C0C0D810085EEF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00FB04A1C0C0D810085EEF5 /* Images.xcassets */; };
-		B00FB05A1C0C0D810085EEF5 /* SampleDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */; };
-		B00FB05B1C0C0D810085EEF5 /* SimplestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */; };
-		B00FB05C1C0C0D810085EEF5 /* ViewController+SampleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */; };
-		B00FB05D1C0C0D810085EEF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04E1C0C0D810085EEF5 /* ViewController.swift */; };
+		B00FB0661C0C0E300085EEF5 /* TKSwarmAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = B00FB0651C0C0E300085EEF5 /* TKSwarmAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B00FB06A1C0C0E300085EEF5 /* TKSwarmAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FB0631C0C0E300085EEF5 /* TKSwarmAlert.framework */; };
+		B00FB06B1C0C0E300085EEF5 /* TKSwarmAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B00FB0631C0C0E300085EEF5 /* TKSwarmAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B00FB0701C0C0E510085EEF5 /* BrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03C1C0C0D810085EEF5 /* BrightView.swift */; };
+		B00FB0711C0C0E510085EEF5 /* FallingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */; };
+		B00FB0721C0C0E510085EEF5 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */; };
+		B00FB0731C0C0E510085EEF5 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */; };
+		B00FB0741C0C0E510085EEF5 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */; };
+		B00FB0751C0C0E510085EEF5 /* TKSwarmAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */; };
+		B00FB0761C0C0E510085EEF5 /* TKSWBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */; };
+		B00FB0771C0C0E910085EEF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */; };
+		B00FB0781C0C0E910085EEF5 /* SampleDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */; };
+		B00FB0791C0C0E910085EEF5 /* SimplestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */; };
+		B00FB07A1C0C0E910085EEF5 /* ViewController+SampleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */; };
+		B00FB07B1C0C0E910085EEF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04E1C0C0D810085EEF5 /* ViewController.swift */; };
+		B00FB07D1C0C0F0C0085EEF5 /* someExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB07C1C0C0F0C0085EEF5 /* someExtensions.swift */; };
+		B0EF79DE1C0C12EF0087E857 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B00FB0681C0C0E300085EEF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00FB01E1C0C0D470085EEF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00FB0621C0C0E300085EEF5;
+			remoteInfo = TKSwarmAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B00FB06F1C0C0E300085EEF5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B00FB06B1C0C0E300085EEF5 /* TKSwarmAlert.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKSwarmAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,16 +62,27 @@
 		B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSWBackgroundView.swift; sourceTree = "<group>"; };
 		B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B00FB0471C0C0D810085EEF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B00FB0491C0C0D810085EEF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B00FB04A1C0C0D810085EEF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDesignView.swift; sourceTree = "<group>"; };
 		B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplestExample.swift; sourceTree = "<group>"; };
 		B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SampleViews.swift"; sourceTree = "<group>"; };
 		B00FB04E1C0C0D810085EEF5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B00FB0631C0C0E300085EEF5 /* TKSwarmAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TKSwarmAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00FB0651C0C0E300085EEF5 /* TKSwarmAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKSwarmAlert.h; sourceTree = "<group>"; };
+		B00FB0671C0C0E300085EEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00FB07C1C0C0F0C0085EEF5 /* someExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = someExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B00FB0231C0C0D470085EEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00FB06A1C0C0E300085EEF5 /* TKSwarmAlert.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00FB05F1C0C0E300085EEF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				B00FB0281C0C0D470085EEF5 /* TKSwarmAlertExample */,
+				B00FB0641C0C0E300085EEF5 /* TKSwarmAlert */,
 				B00FB0271C0C0D470085EEF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */,
+				B00FB0631C0C0E300085EEF5 /* TKSwarmAlert.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +122,9 @@
 		B00FB03B1C0C0D810085EEF5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B00FB03E1C0C0D810085EEF5 /* helper */,
 				B00FB03C1C0C0D810085EEF5 /* BrightView.swift */,
 				B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */,
-				B00FB03E1C0C0D810085EEF5 /* helper */,
 				B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */,
 				B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */,
 			);
@@ -107,18 +147,38 @@
 			children = (
 				B00FB0451C0C0D810085EEF5 /* AppDelegate.swift */,
 				B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */,
-				B00FB0481C0C0D810085EEF5 /* Main.storyboard */,
 				B00FB04A1C0C0D810085EEF5 /* Images.xcassets */,
-				B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */,
 				B00FB04C1C0C0D810085EEF5 /* SimplestExample.swift */,
-				B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */,
 				B00FB04E1C0C0D810085EEF5 /* ViewController.swift */,
+				B00FB04D1C0C0D810085EEF5 /* ViewController+SampleViews.swift */,
+				B00FB04B1C0C0D810085EEF5 /* SampleDesignView.swift */,
+				B00FB07C1C0C0F0C0085EEF5 /* someExtensions.swift */,
 			);
 			name = Examples;
 			path = TKSwarmAlert/Examples;
 			sourceTree = SOURCE_ROOT;
 		};
+		B00FB0641C0C0E300085EEF5 /* TKSwarmAlert */ = {
+			isa = PBXGroup;
+			children = (
+				B00FB0651C0C0E300085EEF5 /* TKSwarmAlert.h */,
+				B00FB0671C0C0E300085EEF5 /* Info.plist */,
+			);
+			path = TKSwarmAlert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B00FB0601C0C0E300085EEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00FB0661C0C0E300085EEF5 /* TKSwarmAlert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		B00FB0251C0C0D470085EEF5 /* TKSwarmAlertExample */ = {
@@ -128,15 +188,35 @@
 				B00FB0221C0C0D470085EEF5 /* Sources */,
 				B00FB0231C0C0D470085EEF5 /* Frameworks */,
 				B00FB0241C0C0D470085EEF5 /* Resources */,
+				B00FB06F1C0C0E300085EEF5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B00FB0691C0C0E300085EEF5 /* PBXTargetDependency */,
 			);
 			name = TKSwarmAlertExample;
 			productName = TKSwarmAlertExample;
 			productReference = B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B00FB0621C0C0E300085EEF5 /* TKSwarmAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00FB06C1C0C0E300085EEF5 /* Build configuration list for PBXNativeTarget "TKSwarmAlert" */;
+			buildPhases = (
+				B00FB05E1C0C0E300085EEF5 /* Sources */,
+				B00FB05F1C0C0E300085EEF5 /* Frameworks */,
+				B00FB0601C0C0E300085EEF5 /* Headers */,
+				B00FB0611C0C0E300085EEF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKSwarmAlert;
+			productName = TKSwarmAlert;
+			productReference = B00FB0631C0C0E300085EEF5 /* TKSwarmAlert.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -149,6 +229,9 @@
 				ORGANIZATIONNAME = "岡本拓也";
 				TargetAttributes = {
 					B00FB0251C0C0D470085EEF5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					B00FB0621C0C0E300085EEF5 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
@@ -167,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				B00FB0251C0C0D470085EEF5 /* TKSwarmAlertExample */,
+				B00FB0621C0C0E300085EEF5 /* TKSwarmAlert */,
 			);
 		};
 /* End PBXProject section */
@@ -176,9 +260,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EF79DE1C0C12EF0087E857 /* LaunchScreen.xib in Resources */,
 				B00FB0591C0C0D810085EEF5 /* Images.xcassets in Resources */,
-				B00FB0571C0C0D810085EEF5 /* LaunchScreen.xib in Resources */,
-				B00FB0581C0C0D810085EEF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00FB0611C0C0E300085EEF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,22 +279,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00FB05A1C0C0D810085EEF5 /* SampleDesignView.swift in Sources */,
-				B00FB05B1C0C0D810085EEF5 /* SimplestExample.swift in Sources */,
-				B00FB0561C0C0D810085EEF5 /* AppDelegate.swift in Sources */,
-				B00FB04F1C0C0D810085EEF5 /* BrightView.swift in Sources */,
-				B00FB0521C0C0D810085EEF5 /* DynamicBlurView.swift in Sources */,
-				B00FB0541C0C0D810085EEF5 /* TKSwarmAlert.swift in Sources */,
-				B00FB05D1C0C0D810085EEF5 /* ViewController.swift in Sources */,
-				B00FB0511C0C0D810085EEF5 /* CGRectEx.swift in Sources */,
-				B00FB0551C0C0D810085EEF5 /* TKSWBackgroundView.swift in Sources */,
-				B00FB0531C0C0D810085EEF5 /* NSTimerEx.swift in Sources */,
-				B00FB05C1C0C0D810085EEF5 /* ViewController+SampleViews.swift in Sources */,
-				B00FB0501C0C0D810085EEF5 /* FallingAnimationView.swift in Sources */,
+				B00FB0771C0C0E910085EEF5 /* AppDelegate.swift in Sources */,
+				B00FB07D1C0C0F0C0085EEF5 /* someExtensions.swift in Sources */,
+				B00FB0781C0C0E910085EEF5 /* SampleDesignView.swift in Sources */,
+				B00FB0791C0C0E910085EEF5 /* SimplestExample.swift in Sources */,
+				B00FB07A1C0C0E910085EEF5 /* ViewController+SampleViews.swift in Sources */,
+				B00FB07B1C0C0E910085EEF5 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00FB05E1C0C0E300085EEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00FB0701C0C0E510085EEF5 /* BrightView.swift in Sources */,
+				B00FB0711C0C0E510085EEF5 /* FallingAnimationView.swift in Sources */,
+				B00FB0721C0C0E510085EEF5 /* CGRectEx.swift in Sources */,
+				B00FB0731C0C0E510085EEF5 /* DynamicBlurView.swift in Sources */,
+				B00FB0741C0C0E510085EEF5 /* NSTimerEx.swift in Sources */,
+				B00FB0751C0C0E510085EEF5 /* TKSwarmAlert.swift in Sources */,
+				B00FB0761C0C0E510085EEF5 /* TKSWBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B00FB0691C0C0E300085EEF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B00FB0621C0C0E300085EEF5 /* TKSwarmAlert */;
+			targetProxy = B00FB0681C0C0E300085EEF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */ = {
@@ -213,14 +319,6 @@
 				B00FB0471C0C0D810085EEF5 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		B00FB0481C0C0D810085EEF5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B00FB0491C0C0D810085EEF5 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -313,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlertExample";
@@ -324,10 +423,49 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlertExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B00FB06D1C0C0E300085EEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlert";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B00FB06E1C0C0E300085EEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlert";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -348,6 +486,15 @@
 			buildConfigurations = (
 				B00FB0391C0C0D470085EEF5 /* Debug */,
 				B00FB03A1C0C0D470085EEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00FB06C1C0C0E300085EEF5 /* Build configuration list for PBXNativeTarget "TKSwarmAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00FB06D1C0C0E300085EEF5 /* Debug */,
+				B00FB06E1C0C0E300085EEF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

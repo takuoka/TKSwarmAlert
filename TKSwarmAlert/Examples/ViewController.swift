@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TKSwarmAlert
 
 class ViewController: UIViewController {
 
@@ -52,5 +53,6 @@ class ViewController: UIViewController {
         swAlert.addNextViews(self.makeSampleViews4())
     }
 }
+
 
 

@@ -28,7 +28,7 @@ class SimpleViewController: UIViewController {
             alert.show(type: TKSWBackgroundType.Blur, views: [view])
             
             alert.didDissmissAllViews = {
-                println("didDissmissAllViews")
+                print("didDissmissAllViews")
             }
         }
     }

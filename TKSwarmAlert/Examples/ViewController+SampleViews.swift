@@ -55,13 +55,13 @@ extension ViewController {
         
         var views:[UIView] = []
         
-        var view1 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "crown88"), text:"HighScore!!"), frame: f1)
+        let view1 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "crown88"), text:"HighScore!!"), frame: f1)
         views.append(view1)
         
-        var view2 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "clear"), text:"Clear!!"), frame: f2)
+        let view2 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "clear"), text:"Clear!!"), frame: f2)
         views.append(view2)//clear
         
-        var view3 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "unlock88"), text:"Next Stage is Unlocked!!"), frame: f3)
+        let view3 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "unlock88"), text:"Next Stage is Unlocked!!"), frame: f3)
         views.append(view3)
         
         return views
@@ -79,13 +79,13 @@ extension ViewController {
         
         var views:[UIView] = []
         
-        var view1 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "apple88"), text:"Apple!!"), frame: f1)
+        let view1 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "apple88"), text:"Apple!!"), frame: f1)
         views.append(view1)
         
-        var view2 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "android88"), text:"Android!!"), frame: f2)
+        let view2 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "android88"), text:"Android!!"), frame: f2)
         views.append(view2)//clear
         //
-        var view3 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "windows88"), text:"Windows!!"), frame: f3)
+        let view3 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "windows88"), text:"Windows!!"), frame: f3)
         views.append(view3)
         
         return views
@@ -103,13 +103,13 @@ extension ViewController {
         
         var views:[UIView] = []
         
-        var view1 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "github88"), text:"GitHub!!"), frame: f1)
+        let view1 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "github88"), text:"GitHub!!"), frame: f1)
         views.append(view1)
         
-        var view2 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "dribbble88"), text:"Dribbble!!"), frame: f2)
+        let view2 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "dribbble88"), text:"Dribbble!!"), frame: f2)
         views.append(view2)//clear
         
-        var view3 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "soundcloud88"), text:"SoundCloud!!"), frame: f3)
+        let view3 = SampleDesignView(type: SampleDesignViewType.Bar(icon:UIImage(named: "soundcloud88"), text:"SoundCloud!!"), frame: f3)
         views.append(view3)
         
         return views
@@ -128,22 +128,22 @@ extension ViewController {
         
         var views:[UIView] = []
         
-        var view = UIView()
+        let view = UIView()
         view.frame = f
         views.append(view)
         
-        var label = UILabel()
+        let label = UILabel()
         label.frame = CGRectMake(0, 0, f.width, f.height)
         label.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.8)
         label.text = "your view"
         label.textAlignment = NSTextAlignment.Center
         view.addSubview(label)
         
-        var view2 = UIView()
+        let view2 = UIView()
         view2.frame = f2
         views.append(view2)
         
-        var label2 = UILabel()
+        let label2 = UILabel()
         label2.frame = CGRectMake(0, 0, f.width, f.height)
         label2.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.8)
         label2.text = "your view"

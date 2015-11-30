@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         swAlert.addSubStaticView(spawnButton)
 
         swAlert.didDissmissAllViews = {
-            println("didDissmissAllViews")
+            print("didDissmissAllViews")
         }
     }
     

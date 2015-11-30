@@ -25,7 +25,7 @@ class SampleDesignView: UIView {
         }
     }
     
-    func setupBarDesign(#icon:UIImage?, text:String) {
+    func setupBarDesign(icon icon:UIImage?, text:String) {
         self.backgroundColor = UIColor.whiteColor()
         self.layer.borderWidth = 0
         self.layer.borderColor = UIColor.blackColor().CGColor
@@ -56,7 +56,7 @@ class SampleDesignView: UIView {
     }
     
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

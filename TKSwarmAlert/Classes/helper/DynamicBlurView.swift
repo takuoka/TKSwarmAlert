@@ -92,17 +92,17 @@ public class DynamicBlurView: UIView {
         return BlurLayer.self
     }
     
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         userInteractionEnabled = false
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         userInteractionEnabled = false
     }
+    
     
     public override func didMoveToSuperview() {
         super.didMoveToSuperview()

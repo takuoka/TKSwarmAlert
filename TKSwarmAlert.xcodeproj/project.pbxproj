@@ -218,6 +218,8 @@
 		B0239BB51B85EC08002801FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Uniface;
 				TargetAttributes = {

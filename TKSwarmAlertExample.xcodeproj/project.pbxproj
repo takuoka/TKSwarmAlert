@@ -14,7 +14,6 @@
 		B00FB0701C0C0E510085EEF5 /* BrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03C1C0C0D810085EEF5 /* BrightView.swift */; };
 		B00FB0711C0C0E510085EEF5 /* FallingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */; };
 		B00FB0721C0C0E510085EEF5 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */; };
-		B00FB0731C0C0E510085EEF5 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */; };
 		B00FB0741C0C0E510085EEF5 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */; };
 		B00FB0751C0C0E510085EEF5 /* TKSwarmAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */; };
 		B00FB0761C0C0E510085EEF5 /* TKSWBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */; };
@@ -56,7 +55,6 @@
 		B00FB03C1C0C0D810085EEF5 /* BrightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightView.swift; sourceTree = "<group>"; };
 		B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingAnimationView.swift; sourceTree = "<group>"; };
 		B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
-		B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
 		B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
 		B00FB0421C0C0D810085EEF5 /* TKSwarmAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSwarmAlert.swift; sourceTree = "<group>"; };
 		B00FB0431C0C0D810085EEF5 /* TKSWBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSWBackgroundView.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				B00FB03F1C0C0D810085EEF5 /* CGRectEx.swift */,
-				B00FB0401C0C0D810085EEF5 /* DynamicBlurView.swift */,
 				B00FB0411C0C0D810085EEF5 /* NSTimerEx.swift */,
 			);
 			path = helper;
@@ -295,7 +292,6 @@
 				B00FB0701C0C0E510085EEF5 /* BrightView.swift in Sources */,
 				B00FB0711C0C0E510085EEF5 /* FallingAnimationView.swift in Sources */,
 				B00FB0721C0C0E510085EEF5 /* CGRectEx.swift in Sources */,
-				B00FB0731C0C0E510085EEF5 /* DynamicBlurView.swift in Sources */,
 				B00FB0741C0C0E510085EEF5 /* NSTimerEx.swift in Sources */,
 				B00FB0751C0C0E510085EEF5 /* TKSwarmAlert.swift in Sources */,
 				B00FB0761C0C0E510085EEF5 /* TKSWBackgroundView.swift in Sources */,

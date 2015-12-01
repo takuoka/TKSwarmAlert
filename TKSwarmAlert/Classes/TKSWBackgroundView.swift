@@ -17,34 +17,49 @@ public enum TKSWBackgroundType {
 
 
 
-class TKSWBackgroundView: DynamicBlurView {
+class TKSWBackgroundView: UIView {
     
     
     let transparentBlackView = UIView()
     var brightView: BrightView?
 
+    var blurView: UIVisualEffectView?
+
+    
     var blackAlphaForBlur:CGFloat = 0.125
     var blurDuration: NSTimeInterval = 0.2
+    let type: TKSWBackgroundType
 
-    override init(frame:CGRect) {
+    init(frame:CGRect, type: TKSWBackgroundType) {
+        self.type = type
         super.init(frame:frame)
         self.hidden = true
-        self.blurRadius = 0
+        
         transparentBlackView.frame = frame
         transparentBlackView.backgroundColor = UIColor.blackColor()
         transparentBlackView.alpha = 0
         self.addSubview(transparentBlackView)
+        
+        switch type {
+        case .Blur, .BrightBlur:
+            blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+            blurView?.frame = frame
+            self.addSubview(blurView!)
+            blurView?.alpha = 0
+            break
+        case .TransparentBlack:
+            break
+        }
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    func show(type type:TKSWBackgroundType, duration:NSTimeInterval = 0.2, didEnd:Closure? = nil) {
+    func show(duration duration:NSTimeInterval = 0.2, didEnd:Closure? = nil) {
         if duration != 0.2 {
             self.blurDuration = duration
         }
-        
         switch type {
         case .Blur:
             showBlur(didEnd)
@@ -69,9 +84,10 @@ class TKSWBackgroundView: DynamicBlurView {
     
     func showBlur(didEnd:Closure? = nil) {
         self.hidden = false
+        self.blurView?.alpha = 0
         UIView.animateWithDuration(blurDuration) {
-            self.blurRadius = 6
-            self.transparentBlackView.alpha = self.blackAlphaForBlur
+            self.blurView?.alpha = 1
+            self.transparentBlackView.alpha = 0.15
         }
         NSTimer.schedule(delay: blurDuration + 0.1) { timer in
             didEnd?()
@@ -79,8 +95,8 @@ class TKSWBackgroundView: DynamicBlurView {
     }
     
     func showBrightBlur(didEnd:Closure? = nil) {
-        self.brightView = BrightView(frame: self.frame, center: CGPoint(x: self.center.x, y: self.center.y * 0.5))
-        self.insertSubview(brightView!, aboveSubview: transparentBlackView)
+        self.brightView = BrightView(frame: self.frame, center: CGPoint(x: self.center.x, y: self.center.y))
+        self.insertSubview(brightView!, aboveSubview: blurView!)
         showBlur() {
             self.brightView?.rotateAnimation()
             didEnd?()

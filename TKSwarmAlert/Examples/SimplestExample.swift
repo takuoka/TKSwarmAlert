@@ -34,7 +34,7 @@ class SimpleViewController: UIViewController {
         staticView.frame = CGRect(x: 250, y: 250, width: 50, height: 50)
         
         NSTimer.schedule(delay: 1) { timer in
-            let alert = TKSwarmAlert(type: .BrightBlur)
+            let alert = TKSwarmAlert(backgroundType: .BrightBlur)
             alert.durationOfPreventingTapBackgroundArea = 3
 
             alert.addSubStaticView(staticView)

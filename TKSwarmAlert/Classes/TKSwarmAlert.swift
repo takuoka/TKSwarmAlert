@@ -19,8 +19,8 @@ public class TKSwarmAlert {
     var blurView: TKSWBackgroundView?
     let type: TKSWBackgroundType
     
-    public init(type:TKSWBackgroundType) {
-        self.type = type
+    public init(backgroundType: TKSWBackgroundType = .Blur) {
+        self.type = backgroundType
     }
     
     public func addNextViews(views:[UIView]) {

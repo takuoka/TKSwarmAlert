@@ -111,7 +111,7 @@ class TKSWBackgroundView: UIView {
         default: break
         }
         if lightColor == nil {
-            UIColor.whiteColor().colorWithAlphaComponent(0.2)
+            lightColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
         }
         self.brightView = BrightView(frame: self.frame, color: lightColor!, center: CGPoint(x: self.center.x, y: self.center.y))
         self.insertSubview(brightView!, aboveSubview: blurView!)

@@ -56,7 +56,7 @@ class TKSWBackgroundView: UIView {
     }
     
     
-    func show(duration duration:NSTimeInterval = 0.2, didEnd:Closure? = nil) {
+    func show(duration duration:NSTimeInterval = 0.2, didEnd:(()->Void)? = nil) {
         if duration != 0.2 {
             self.blurDuration = duration
         }
@@ -72,7 +72,7 @@ class TKSWBackgroundView: UIView {
     }
     
     
-    func showTransparentBlack(didEnd:Closure? = nil) {
+    func showTransparentBlack(didEnd:(()->Void)? = nil) {
         self.hidden = false
         UIView.animateWithDuration(blurDuration) {
             self.transparentBlackView.alpha = self.blackAlphaForBlur
@@ -82,7 +82,7 @@ class TKSWBackgroundView: UIView {
         }
     }
     
-    func showBlur(didEnd:Closure? = nil) {
+    func showBlur(didEnd:(()->Void)? = nil) {
         self.hidden = false
         self.blurView?.alpha = 0
         UIView.animateWithDuration(blurDuration) {
@@ -94,7 +94,7 @@ class TKSWBackgroundView: UIView {
         }
     }
     
-    func showBrightBlur(didEnd:Closure? = nil) {
+    func showBrightBlur(didEnd:(()->Void)? = nil) {
         self.brightView = BrightView(frame: self.frame, center: CGPoint(x: self.center.x, y: self.center.y))
         self.insertSubview(brightView!, aboveSubview: blurView!)
         showBlur() {

@@ -8,12 +8,11 @@
 
 import UIKit
 
-public typealias Closure=()->Void
 
 public class TKSwarmAlert {
     
     public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
-    public var didDissmissAllViews: Closure?
+    public var didDissmissAllViews: ()->Void = {}
 
     private var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
@@ -77,7 +76,7 @@ public class TKSwarmAlert {
             animationView?.didDissmissAllViews = {
                 self.blurView?.removeFromSuperview()
                 self.animationView?.removeFromSuperview()
-                self.didDissmissAllViews?()
+                self.didDissmissAllViews()
                 for staticView in self.staticViews {
                     staticView.alpha = 1
                 }

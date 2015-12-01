@@ -11,7 +11,7 @@ import TKSwarmAlert
 
 class ViewController: UIViewController {
 
-    let swAlert = TKSwarmAlert(backgroundType: .Blur)
+    let swAlert = TKSwarmAlert(backgroundType: .BrightBlur(style: .Dark, blackAlpha: 0, lightColor: UIColor.whiteColor()))
 
     override func viewDidLoad() {
         super.viewDidLoad()

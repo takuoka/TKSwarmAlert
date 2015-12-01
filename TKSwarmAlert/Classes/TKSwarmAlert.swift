@@ -19,7 +19,7 @@ public class TKSwarmAlert {
     var blurView: TKSWBackgroundView?
     let type: TKSWBackgroundType
     
-    public init(backgroundType: TKSWBackgroundType = .Blur) {
+    public init(backgroundType: TKSWBackgroundType = .Blur(style: .Light, blackAlpha: 0.125)) {
         self.type = backgroundType
     }
     

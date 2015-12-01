@@ -38,8 +38,8 @@ import TKSwarmAlert
 ## Show
 
 ``` swift
-let alert = TKSwarmAlert()
-alert.show(type: TKSWBackgroundType.Blur, views: yourViews)
+let alert = TKSwarmAlert(backgroundType: .Blur)
+alert.show(yourViews)
 
 // If you want
 alert.addNextViews(yourViews2)

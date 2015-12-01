@@ -78,6 +78,11 @@ alert.didDissmissAllViews = {
 ## .BrightBlur
 ![Demo GIF Animation](https://raw.githubusercontent.com/entotsu/TKSwarmAlert/master/ScreenShots/bright.gif "Demo GIF Animation")
 
+# Kind of Blur
+
+* branch `master` -> UIVisualEffectView
+* branch `DynamicBlur` -> DynamicBlurView (beautiful but unstable)
+
 
 # Popup view is just a UIView.
 

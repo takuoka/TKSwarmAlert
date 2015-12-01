@@ -8,20 +8,19 @@
 
 import UIKit
 
-public typealias Closure=()->Void
 
 public class TKSwarmAlert {
     
     public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
-    public var didDissmissAllViews: Closure?
+    public var didDissmissAllViews: ()->Void = {}
 
     private var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
-
+    let type: TKSWBackgroundType
     
-    public init() {
-        
+    public init(backgroundType: TKSWBackgroundType = .Blur) {
+        self.type = backgroundType
     }
     
     public func addNextViews(views:[UIView]) {
@@ -33,11 +32,11 @@ public class TKSwarmAlert {
         self.staticViews.append(view)
     }
     
-    public func show(type type:TKSWBackgroundType ,views:[UIView]) {
+    public func show(views:[UIView]) {
         let window:UIWindow? = UIApplication.sharedApplication().keyWindow
         if window != nil {
             let frame:CGRect = window!.bounds
-            blurView = TKSWBackgroundView(frame: frame)
+            blurView = TKSWBackgroundView(frame: frame, type: type)
             animationView = FallingAnimationView(frame: frame)
             
             if durationOfPreventingTapBackgroundArea > 0 {
@@ -59,7 +58,7 @@ public class TKSwarmAlert {
             }
             window!.addSubview(blurView!)
             window!.addSubview(animationView!)
-            blurView?.show(type: type, duration:showDuration) {
+            blurView?.show(duration:showDuration) {
                 self.spawn(views)
             }
 
@@ -77,7 +76,7 @@ public class TKSwarmAlert {
             animationView?.didDissmissAllViews = {
                 self.blurView?.removeFromSuperview()
                 self.animationView?.removeFromSuperview()
-                self.didDissmissAllViews?()
+                self.didDissmissAllViews()
                 for staticView in self.staticViews {
                     staticView.alpha = 1
                 }

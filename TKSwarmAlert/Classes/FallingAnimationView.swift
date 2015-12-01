@@ -42,8 +42,8 @@ import UIKit
 
 class FallingAnimationView: UIView {
     
-    var willDissmissAllViews: Closure?
-    var didDissmissAllViews: Closure?
+    var willDissmissAllViews: ()->Void = {}
+    var didDissmissAllViews: ()->Void = {}
 
     
     let gravityMagniture:CGFloat = 3
@@ -239,7 +239,7 @@ class FallingAnimationView: UIView {
         if nextViewsList.count == 0 {
             //ここでフェードアウト
             disableTapGesture()
-            self.willDissmissAllViews?()
+            self.willDissmissAllViews()
         }
     }
 
@@ -269,7 +269,7 @@ class FallingAnimationView: UIView {
             if self != nil {
                 if self!.animatedViews.count == 0 {
                     self!.animator.removeAllBehaviors()
-                    self!.didDissmissAllViews?()
+                    self!.didDissmissAllViews()
                 }
                 else {
                     for v in views {

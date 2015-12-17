@@ -89,8 +89,10 @@ class TKSWBackgroundView: UIView {
         default: break
         }
 
-        self.brightView = BrightView(frame: self.frame, color: lightColor!, center: CGPoint(x: self.center.x, y: self.center.y))
-        self.insertSubview(brightView!, aboveSubview: transparentBlackView)
+        if lightColor != nil {
+            self.brightView = BrightView(frame: self.frame, color: lightColor!, center: CGPoint(x: self.center.x, y: self.center.y))
+            self.insertSubview(brightView!, aboveSubview: transparentBlackView)
+        }
 
         self.hidden = false
         UIView.animateWithDuration(blurDuration) {

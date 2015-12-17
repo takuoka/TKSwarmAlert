@@ -19,6 +19,12 @@ public class TKSwarmAlert {
     var blurView: TKSWBackgroundView?
     let type: TKSWBackgroundType
     
+    public var fadeInDuration: NSTimeInterval = 0.2 {
+        didSet {
+            self.blurView?.fadeInDuration = fadeInDuration
+        }
+    }
+    
     public init(backgroundType: TKSWBackgroundType = .Blur(style: .Light, blackAlpha: 0.125)) {
         self.type = backgroundType
     }
@@ -37,6 +43,7 @@ public class TKSwarmAlert {
         if window != nil {
             let frame:CGRect = window!.bounds
             blurView = TKSWBackgroundView(frame: frame, type: type)
+            blurView?.fadeInDuration = self.fadeInDuration
             animationView = FallingAnimationView(frame: frame)
             
             if durationOfPreventingTapBackgroundArea > 0 {

@@ -27,7 +27,7 @@ class TKSWBackgroundView: UIView {
 
     
     var blackAlphaForBlur:CGFloat = 0.125
-    var blurDuration: NSTimeInterval = 0.2
+    var fadeInDuration: NSTimeInterval = 0.2
     let type: TKSWBackgroundType
 
     init(frame:CGRect, type: TKSWBackgroundType) {
@@ -65,7 +65,7 @@ class TKSWBackgroundView: UIView {
     
     func show(duration duration:NSTimeInterval = 0.2, didEnd:(()->Void)? = nil) {
         if duration != 0.2 {
-            self.blurDuration = duration
+            self.fadeInDuration = duration
         }
         switch type {
         case let .Blur(_, blackAlpha):
@@ -95,10 +95,10 @@ class TKSWBackgroundView: UIView {
         }
 
         self.hidden = false
-        UIView.animateWithDuration(blurDuration) {
+        UIView.animateWithDuration(fadeInDuration) {
             self.transparentBlackView.alpha = self.blackAlphaForBlur
         }
-        NSTimer.schedule(delay: blurDuration + 0.1) { timer in
+        NSTimer.schedule(delay: fadeInDuration + 0.1) { timer in
             self.brightView?.showAndRotateAnimation()
             didEnd?()
         }
@@ -107,11 +107,11 @@ class TKSWBackgroundView: UIView {
     func showBlur(didEnd:(()->Void)? = nil) {
         self.hidden = false
         self.blurView?.alpha = 0
-        UIView.animateWithDuration(blurDuration) {
+        UIView.animateWithDuration(fadeInDuration) {
             self.blurView?.alpha = 1
             self.transparentBlackView.alpha = self.blackAlphaForBlur
         }
-        NSTimer.schedule(delay: blurDuration + 0.1) { timer in
+        NSTimer.schedule(delay: fadeInDuration + 0.1) { timer in
             didEnd?()
         }
     }

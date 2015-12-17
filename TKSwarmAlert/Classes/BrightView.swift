@@ -64,7 +64,7 @@ class BrightView: UIView {
         self.layer.addSublayer(shapeLayer)
     }
     
-    func rotateAnimation() {
+    func showAndRotateAnimation() {
         self.hidden = false
         let rotate = CABasicAnimation(keyPath: "transform.rotation.z")
         rotate.fromValue = 0

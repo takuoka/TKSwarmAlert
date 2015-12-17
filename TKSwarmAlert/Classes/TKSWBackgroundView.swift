@@ -12,7 +12,7 @@ import UIKit
 public enum TKSWBackgroundType {
     case Blur(style: UIBlurEffectStyle, blackAlpha: CGFloat)
     case BrightBlur(style: UIBlurEffectStyle, blackAlpha: CGFloat, lightColor: UIColor?)
-    case TransparentBlack(alpha: CGFloat)
+    case TransparentBlack(alpha: CGFloat, lightColor: UIColor?)
 }
 
 
@@ -74,7 +74,7 @@ class TKSWBackgroundView: UIView {
         case let .BrightBlur(_, blackAlpha, _):
             self.blackAlphaForBlur = blackAlpha
             showBrightBlur(didEnd)
-        case let .TransparentBlack(alpha):
+        case let .TransparentBlack(alpha, _):
             self.blackAlphaForBlur = alpha
             showTransparentBlack(didEnd)
         }
@@ -82,11 +82,22 @@ class TKSWBackgroundView: UIView {
     
     
     func showTransparentBlack(didEnd:(()->Void)? = nil) {
+        
+        var lightColor: UIColor?
+        switch type {
+        case let .TransparentBlack(_, color): lightColor = color
+        default: break
+        }
+
+        self.brightView = BrightView(frame: self.frame, color: lightColor!, center: CGPoint(x: self.center.x, y: self.center.y))
+        self.insertSubview(brightView!, aboveSubview: transparentBlackView)
+
         self.hidden = false
         UIView.animateWithDuration(blurDuration) {
             self.transparentBlackView.alpha = self.blackAlphaForBlur
         }
         NSTimer.schedule(delay: blurDuration + 0.1) { timer in
+            self.brightView?.showAndRotateAnimation()
             didEnd?()
         }
     }
@@ -106,8 +117,7 @@ class TKSWBackgroundView: UIView {
     func showBrightBlur(didEnd:(()->Void)? = nil) {
         var lightColor: UIColor?
         switch type {
-        case let .BrightBlur(_, _, color):
-            lightColor = color
+        case let .BrightBlur(_, _, color): lightColor = color
         default: break
         }
         if lightColor == nil {
@@ -116,7 +126,7 @@ class TKSWBackgroundView: UIView {
         self.brightView = BrightView(frame: self.frame, color: lightColor!, center: CGPoint(x: self.center.x, y: self.center.y))
         self.insertSubview(brightView!, aboveSubview: blurView!)
         showBlur() {
-            self.brightView?.rotateAnimation()
+            self.brightView?.showAndRotateAnimation()
             didEnd?()
         }
     }

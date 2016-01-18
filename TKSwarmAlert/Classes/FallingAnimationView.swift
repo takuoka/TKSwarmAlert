@@ -48,7 +48,7 @@ class FallingAnimationView: UIView {
     
     let gravityMagniture:CGFloat = 3
     let snapBackDistance:CGFloat = 30
-    let fieldMargin:CGFloat = 300
+    let fieldMargin:CGFloat = 1000
 
     var animator: UIDynamicAnimator
     var animationView: UIView
@@ -266,29 +266,31 @@ class FallingAnimationView: UIView {
         let gravity = UIGravityBehavior(items: views)
         gravity.magnitude = gravityMagniture
         gravity.action = { [weak self] in
-            if self != nil {
-                if self!.animatedViews.count == 0 {
-                    self!.animator.removeAllBehaviors()
-                    self!.didDissmissAllViews()
+            self?.gravityAction(views)
+        }
+        self.animator.addBehavior(gravity)
+    }
+    
+    func gravityAction(views: [UIView]) {
+        if animatedViews.count == 0 {
+            animator.removeAllBehaviors()
+            didDissmissAllViews()
+        }
+        else {
+            for v in views {
+                guard let superView = v.superview else {return}
+                //print(" bottom: \(superView.bounds.bottom)  top: \(v.frame.top)  margin:\(fieldMargin)")
+                if v.frame.top >= (superView.bounds.bottom - fieldMargin) {
+                    v.removeFromSuperview()
                 }
-                else {
-                    for v in views {
-                        if v.superview != nil {
-                            if v.frame.top >= (v.superview!.bounds.bottom - self!.fieldMargin) {
-                                v.removeFromSuperview()
-                            }
-                            else if v.frame.right <= (v.superview!.bounds.left + self!.fieldMargin) {
-                                v.removeFromSuperview()
-                            }
-                            else if v.frame.left >= (v.superview!.bounds.right - self!.fieldMargin) {
-                                v.removeFromSuperview()
-                            }
-                        }
-                    }
+                else if v.frame.right <= (superView.bounds.left + fieldMargin) {
+                    v.removeFromSuperview()
+                }
+                else if v.frame.left >= (superView.bounds.right - fieldMargin) {
+                    v.removeFromSuperview()
                 }
             }
         }
-        self.animator.addBehavior(gravity)
     }
     
 

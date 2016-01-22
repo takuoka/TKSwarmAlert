@@ -8,8 +8,8 @@
 
 import UIKit
 
-
-public class TKSwarmAlert {
+@objc
+public class TKSwarmAlert: NSObject {
     
     public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
     public var didDissmissAllViews: ()->Void = {}

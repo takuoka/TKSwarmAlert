@@ -18,9 +18,15 @@ public class TKSwarmAlert: NSObject {
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
     let type: TKSWBackgroundType
-    
+  
+  
+    public override init() {
+      self.type = TKSWBackgroundType.Blur
+    }
+  
     public init(backgroundType: TKSWBackgroundType = .Blur) {
         self.type = backgroundType
+        super.init()
     }
     
     public func addNextViews(views:[UIView]) {

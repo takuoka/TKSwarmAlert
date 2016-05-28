@@ -38,13 +38,8 @@ import TKSwarmAlert
 ## Show
 
 ``` swift
-let alert = TKSwarmAlert(backgroundType: .Blur)
-alert.show(yourViews)
-
-// If you want
-alert.addNextViews(yourViews2)
-alert.addNextViews(yourViews3)
-
+let alert = TKSwarmAlert()
+alert.show(type: .BrightBlur, views: [yourViews1, yourViews2, yourViews3])
 ```
 
 ## Static Views

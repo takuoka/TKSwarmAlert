@@ -8,8 +8,8 @@
 
 import UIKit
 
-
-public class TKSwarmAlert {
+@objc
+public class TKSwarmAlert: NSObject {
     
     public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
     public var didDissmissAllViews: ()->Void = {}
@@ -18,9 +18,15 @@ public class TKSwarmAlert {
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
     let type: TKSWBackgroundType
-    
+  
+  
+    public override init() {
+      self.type = TKSWBackgroundType.Blur
+    }
+  
     public init(backgroundType: TKSWBackgroundType = .Blur) {
         self.type = backgroundType
+        super.init()
     }
     
     public func addNextViews(views:[UIView]) {

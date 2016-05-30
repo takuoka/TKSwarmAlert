@@ -19,14 +19,30 @@ Animation Tool for Alert like [Swarm](https://swarmapp.com/) app.
 
 # Installation
 
-``` ruby
+#### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
 pod 'TKSwarmAlert'
 ```
 
-``` ruby
+To get the full benefits import `YourLibrary` wherever you import UIKit
+
+``` swift
+import UIKit
+import YourLibrary
+```
+#### Carthage
+Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/YourLibrary.framework` to an iOS project.
+
+```
 github "entotsu/TKSwarmAlert"
 ```
-
+#### Manually
+1. Download and drop ```YourLibrary.swift``` in your project.  
+2. Congratulations!  
 
 # Usage
 

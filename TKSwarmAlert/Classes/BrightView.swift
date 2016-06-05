@@ -39,8 +39,8 @@ class BrightView: UIView {
     func addBrightLayer() {
         let radius:CGFloat = self.frame.height + self.frame.width
         let path:CGMutablePath = CGPathCreateMutable()
-        func makeFanShapedPathDeviedBy18(var i:Int) {
-            i = i % 18
+        func makeFanShapedPathDeviedBy18(i:Int) {
+            let i = i % 18
             let oneAngle = CGFloat(M_PI) / 9
             let startAngle = oneAngle * CGFloat(i)
             let endAngle = startAngle + oneAngle

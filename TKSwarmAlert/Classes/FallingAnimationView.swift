@@ -147,7 +147,7 @@ class FallingAnimationView: UIView {
         // make it draggable
         for v in views {
 //            dev_makeLine(v)
-            v.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "didDrag:"))
+            v.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(FallingAnimationView.didDrag(_:))))
             v.tag = startPoints.count
             startPoints.append(v.center)
             currentAnimationViewTags.append(v.tag)
@@ -307,7 +307,7 @@ class FallingAnimationView: UIView {
     }
     
     func enableTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: "onTapSuperView")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FallingAnimationView.onTapSuperView))
         self.addGestureRecognizer(tapGesture)
     }
     

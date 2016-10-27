@@ -88,7 +88,7 @@ class FallingAnimationView: UIView {
         }
     }
     
-    func isCurrentView(_ view:UIView) -> Bool {
+    func isCurrentView(view:UIView) -> Bool {
         for currentTag in self.currentAnimationViewTags {
             if currentTag == view.tag {
                 return true
@@ -96,7 +96,7 @@ class FallingAnimationView: UIView {
         }
         return false
     }
-    func isUnCurrentView(_ view:UIView) -> Bool {
+    func isUnCurrentView(view:UIView) -> Bool {
         for currentTag in self.currentAnimationViewTags {
             if currentTag == view.tag {
                 return false
@@ -106,7 +106,7 @@ class FallingAnimationView: UIView {
     }
 
     
-    func fadeOutStaticViews(_ duration:TimeInterval) {
+    func fadeOutStaticViews(duration:TimeInterval) {
         for v in self.staticViews {
             UIView.animate(withDuration: duration) {
                 v.alpha = 0
@@ -133,11 +133,11 @@ class FallingAnimationView: UIView {
     
     // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    func spawn(_ views:[UIView]) {
+    func spawn(views:[UIView]) {
         //refresh
         currentAnimationViewTags = []
         animator.removeAllBehaviors()
-        fallAndRemove(animatedViews)
+        fallAndRemove(views: animatedViews)
         //fixMargin
         for v in views {
             v.frame.x = v.frame.x + fieldMargin
@@ -152,29 +152,29 @@ class FallingAnimationView: UIView {
             currentAnimationViewTags.append(v.tag)
         }
         // lift up
-        let upDist:CGFloat = calcHideUpDistance(views)
+        let upDist:CGFloat = calcHideUpDistance(views: views)
         for v in views {
             v.frame.y = v.frame.y - upDist
             animationView.addSubview(v)
         }
         //drop
         collisionAll()
-        snap(views)
+        snap(views: views)
     }
     
     func spawnNextViews() {
         let views = nextViewsList.remove(at: 0)
-        spawn(views)
+        spawn(views: views)
     }
     
 
-    func didDrag(_ gesture: UIPanGestureRecognizer) {
+    func didDrag(gesture: UIPanGestureRecognizer) {
         let gestureView = gesture.view!
         if gesture.state == UIGestureRecognizerState.began {
             self.animator.removeAllBehaviors()
             collisionAll()
             snapAll()
-            fallAndRemove(unCurrentAnimationViews)
+            fallAndRemove(views: unCurrentAnimationViews)
             // drag start
             let gripPoint: CGPoint = gesture.location(in: gestureView)
             let offsetFromCenter: UIOffset = UIOffsetMake(
@@ -235,7 +235,7 @@ class FallingAnimationView: UIView {
     }
     
     func fallAndRemoveAll() {
-        fallAndRemove(animatedViews)
+        fallAndRemove(views: animatedViews)
         if nextViewsList.count == 0 {
             //ここでフェードアウト
             disableTapGesture()
@@ -253,16 +253,16 @@ class FallingAnimationView: UIView {
     }
     
     func snapAll() {
-        snap(currentAnimationViews)
+        snap(views: currentAnimationViews)
     }
-    func snap(_ views:[UIView]) {
+    func snap(views:[UIView]) {
         for v in views {
             let snap = UISnapBehavior(item: v, snapTo: startPoints[v.tag])
             self.animator.addBehavior(snap)
         }
     }
     
-    func fallAndRemove(_ views:[UIView]) {
+    func fallAndRemove(views:[UIView]) {
         let gravity = UIGravityBehavior(items: views)
         gravity.magnitude = gravityMagnitude
         gravity.action = { [weak self] in
@@ -323,7 +323,7 @@ class FallingAnimationView: UIView {
         }
     }
 
-    func dev_makeLine(_ v: UIView) {
+    func dev_makeLine(v: UIView) {
         let lineView = UIView(frame: v.frame)
         lineView.backgroundColor = UIColor.clear
         lineView.layer.borderColor = UIColor.blue.withAlphaComponent(0.2).cgColor
@@ -332,7 +332,7 @@ class FallingAnimationView: UIView {
         animationView.addSubview(lineView)
     }
     
-    func calcHideUpDistance(_ views:[UIView])->CGFloat {
+    func calcHideUpDistance(views:[UIView])->CGFloat {
         var minimumTop:CGFloat = CGFloat(HUGE)
         for view in views {
             if view.frame.y < minimumTop {
@@ -342,7 +342,7 @@ class FallingAnimationView: UIView {
         return minimumTop
     }
     
-    func distance(from:CGPoint, to:CGPoint) -> CGFloat {
+    func distance(from from:CGPoint, to:CGPoint) -> CGFloat {
         let xDist = (to.x - from.x)
         let yDist = (to.y - from.y)
         return sqrt((xDist * xDist) + (yDist * yDist))

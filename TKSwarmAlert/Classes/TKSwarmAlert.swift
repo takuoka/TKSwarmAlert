@@ -36,7 +36,6 @@ open class TKSwarmAlert: NSObject {
     }
     
     open func hide(){
-        // A little hacky, but we pretend that the superView has been tapped.
         self.animationView?.onTapSuperView()
     }
     

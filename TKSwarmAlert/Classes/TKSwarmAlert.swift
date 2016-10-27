@@ -91,6 +91,6 @@ open class TKSwarmAlert: NSObject {
     }
     
     open func spawn(_ views:[UIView]) {
-        self.animationView?.spawn(views)
+        self.animationView?.spawn(views: views)
     }
 }

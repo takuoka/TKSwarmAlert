@@ -10,18 +10,22 @@ import Foundation
 
 
 
-extension NSTimer {
-    class func schedule(delay delay: NSTimeInterval, handler: NSTimer! -> Void) -> NSTimer {
+extension Timer {
+    class func schedule(delay delay: TimeInterval, handler: @escaping (Timer!) -> Void) -> Timer {
         let fireDate = delay + CFAbsoluteTimeGetCurrent()
-        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, 0, 0, 0, handler)
-        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, kCFRunLoopCommonModes)
-        return timer
+        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, 0, 0, 0, {
+            timer in handler(timer)
+        })
+        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
+        return timer as! Timer
     }
     
-    class func schedule(repeatInterval interval: NSTimeInterval, handler: NSTimer! -> Void) -> NSTimer {
+    class func schedule(repeatInterval interval: TimeInterval, handler: @escaping (Timer!) -> Void) -> Timer {
         let fireDate = interval + CFAbsoluteTimeGetCurrent()
-        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, interval, 0, 0, handler)
-        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, kCFRunLoopCommonModes)
-        return timer
+        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, interval, 0, 0, {
+            timer in handler(timer)
+        })
+        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
+        return timer as! Timer
     }
 }

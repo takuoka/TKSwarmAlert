@@ -16,12 +16,12 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TKSwarmAlert"
-  s.version      = "0.0.4"
+  s.version      = "1.0.4"
   s.summary      = "Animated Alert Library like \"Swarm\" app."
 
 
-  s.homepage     = "https://github.com/entotsu/TKSwarmAlert"
-  # s.screenshots  = "https://github.com/entotsu/TKSwarmAlert/raw/master/ScreenShots/bright.gif"
+  s.homepage     = "https://github.com/kandluis/TKSwarmAlert"
+  s.screenshots  = "https://github.com/kandluis/TKSwarmAlert/raw/master/ScreenShots/bright.gif"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -44,7 +44,8 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Takuya.Okamoto" => "blackn.red42@gmail.com" }
+  s.authors             = { "Takuya.Okamoto" => "blackn.red42@gmail.com",
+                            "Luis Perez" => "luis.perez.live@gmail.com" }
   # Or just: s.author    = "Takuya.Okamoto"
   # s.authors            = { "Takuya.Okamoto" => "blackn.red42@gmail.com" }
   # s.social_media_url   = "http://twitter.com/Takuya.Okamoto"
@@ -69,7 +70,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/entotsu/TKSwarmAlert.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/kandluis/TKSwarmAlert.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

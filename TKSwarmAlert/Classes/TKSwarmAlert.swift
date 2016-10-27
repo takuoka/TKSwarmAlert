@@ -8,25 +8,22 @@
 
 import UIKit
 
-@objc
+public typealias Closure=()->Void
+
 public class TKSwarmAlert: NSObject {
     
-    public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
-    public var didDissmissAllViews: ()->Void = {}
+    public var durationOfPreventingTapBackgroundArea: TimeInterval = 0
+    public var didDissmissAllViews: Closure?
 
     private var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
-    let type: TKSWBackgroundType
-  
-  
-    public override init() {
-      self.type = TKSWBackgroundType.Blur
-    }
-  
+    
+    var type: TKSWBackgroundType!
+    
     public init(backgroundType: TKSWBackgroundType = .Blur) {
-        self.type = backgroundType
         super.init()
+        self.type = backgroundType
     }
     
     public func addNextViews(views:[UIView]) {
@@ -38,8 +35,13 @@ public class TKSwarmAlert: NSObject {
         self.staticViews.append(view)
     }
     
-    public func show(views:[UIView]) {
-        let window:UIWindow? = UIApplication.sharedApplication().keyWindow
+    public func hide(){
+        // A little hacky, but we pretend that the superView has been tapped.
+        self.animationView?.onTapSuperView()
+    }
+    
+    public func show(type:TKSWBackgroundType, views:[UIView]) {
+        let window:UIWindow? = UIApplication.shared.keyWindow
         if window != nil {
             let frame:CGRect = window!.bounds
             blurView = TKSWBackgroundView(frame: frame, type: type)
@@ -47,42 +49,41 @@ public class TKSwarmAlert: NSObject {
             
             if durationOfPreventingTapBackgroundArea > 0 {
                 animationView?.enableToTapSuperView = false
-                NSTimer.schedule(delay: durationOfPreventingTapBackgroundArea) { [weak self] _ in
+                Timer.schedule(delay: durationOfPreventingTapBackgroundArea) { [weak self] _ in
                     self?.animationView?.enableToTapSuperView = true
                 }
             }
             
-            let showDuration:NSTimeInterval = 0.2
+            let showDuration:TimeInterval = 0.2
 
             for staticView in staticViews {
                 let originalAlpha = staticView.alpha
                 staticView.alpha = 0
                 animationView?.addSubview(staticView)
-                UIView.animateWithDuration(showDuration) {
+                UIView.animate(withDuration: showDuration) {
                     staticView.alpha = originalAlpha
                 }
             }
             window!.addSubview(blurView!)
             window!.addSubview(animationView!)
-            blurView?.show(duration:showDuration) {
-                self.spawn(views)
-            }
-
+            blurView?.show(duration: showDuration, didEnd: {[unowned self] () -> Void in
+                self.spawn(views: views)
+            })
             animationView?.willDissmissAllViews = {
-                let fadeOutDuration:NSTimeInterval = 0.2
+                let fadeOutDuration:TimeInterval = 0.2
                 for v in self.staticViews {
-                    UIView.animateWithDuration(fadeOutDuration) {
+                    UIView.animate(withDuration: fadeOutDuration) {
                         v.alpha = 0
                     }
                 }
-                UIView.animateWithDuration(fadeOutDuration) {
+                UIView.animate(withDuration: fadeOutDuration) {
                     self.blurView?.alpha = 0
                 }
             }
             animationView?.didDissmissAllViews = {
                 self.blurView?.removeFromSuperview()
                 self.animationView?.removeFromSuperview()
-                self.didDissmissAllViews()
+                self.didDissmissAllViews?()
                 for staticView in self.staticViews {
                     staticView.alpha = 1
                 }
@@ -91,6 +92,6 @@ public class TKSwarmAlert: NSObject {
     }
     
     public func spawn(views:[UIView]) {
-        self.animationView?.spawn(views)
+        self.animationView?.spawn(views: views)
     }
 }

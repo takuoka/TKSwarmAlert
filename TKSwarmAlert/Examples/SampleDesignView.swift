@@ -10,7 +10,7 @@ import UIKit
 
 
 enum SampleDesignViewType {
-    case Bar(icon:UIImage?, text:String)
+    case bar(icon:UIImage?, text:String)
 }
 
 
@@ -20,15 +20,15 @@ class SampleDesignView: UIView {
         super.init(frame:frame)
         
         switch type {
-        case let .Bar(icon, text):
+        case let .bar(icon, text):
             setupBarDesign(icon: icon, text: text)
         }
     }
     
-    func setupBarDesign(icon icon:UIImage?, text:String) {
-        self.backgroundColor = UIColor.whiteColor()
+    func setupBarDesign(icon:UIImage?, text:String) {
+        self.backgroundColor = UIColor.white
         self.layer.borderWidth = 0
-        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.layer.borderColor = UIColor.black.cgColor
         self.layer.cornerRadius = 10
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowOpacity = 0.4
@@ -38,7 +38,7 @@ class SampleDesignView: UIView {
         
         if icon != nil {
             let iconView = UIImageView(image: icon)
-            iconView.contentMode = UIViewContentMode.Center
+            iconView.contentMode = UIViewContentMode.center
             iconView.frame = CGRect(x: margin, y: 0, width: self.frame.height, height: self.frame.height)
             self.addSubview(iconView)
         }

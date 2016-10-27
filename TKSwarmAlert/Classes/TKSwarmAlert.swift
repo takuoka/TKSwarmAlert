@@ -10,41 +10,41 @@ import UIKit
 
 public typealias Closure=()->Void
 
-public class TKSwarmAlert: NSObject {
+open class TKSwarmAlert: NSObject {
     
-    public var durationOfPreventingTapBackgroundArea: TimeInterval = 0
-    public var didDissmissAllViews: Closure?
+    open var durationOfPreventingTapBackgroundArea: TimeInterval = 0
+    open var didDissmissAllViews: Closure?
 
-    private var staticViews: [UIView] = []
+    fileprivate var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
     
     var type: TKSWBackgroundType!
     
-    public init(backgroundType: TKSWBackgroundType = .Blur) {
+    public init(backgroundType: TKSWBackgroundType = .blur) {
         super.init()
         self.type = backgroundType
     }
     
-    public func addNextViews(views:[UIView]) {
+    open func addNextViews(_ views:[UIView]) {
         self.animationView?.nextViewsList.append(views)
     }
     
-    public func addSubStaticView(view:UIView) {
+    open func addSubStaticView(_ view:UIView) {
         view.tag = -1
         self.staticViews.append(view)
     }
     
-    public func hide(){
+    open func hide(){
         // A little hacky, but we pretend that the superView has been tapped.
         self.animationView?.onTapSuperView()
     }
     
-    public func show(type:TKSWBackgroundType, views:[UIView]) {
+    open func show(_ views:[UIView]) {
         let window:UIWindow? = UIApplication.shared.keyWindow
         if window != nil {
             let frame:CGRect = window!.bounds
-            blurView = TKSWBackgroundView(frame: frame, type: type)
+            blurView = TKSWBackgroundView(frame: frame, type: self.type)
             animationView = FallingAnimationView(frame: frame)
             
             if durationOfPreventingTapBackgroundArea > 0 {
@@ -67,7 +67,7 @@ public class TKSwarmAlert: NSObject {
             window!.addSubview(blurView!)
             window!.addSubview(animationView!)
             blurView?.show(duration: showDuration, didEnd: {[unowned self] () -> Void in
-                self.spawn(views: views)
+                self.spawn(views)
             })
             animationView?.willDissmissAllViews = {
                 let fadeOutDuration:TimeInterval = 0.2
@@ -91,7 +91,7 @@ public class TKSwarmAlert: NSObject {
         }
     }
     
-    public func spawn(views:[UIView]) {
-        self.animationView?.spawn(views: views)
+    open func spawn(_ views:[UIView]) {
+        self.animationView?.spawn(views)
     }
 }

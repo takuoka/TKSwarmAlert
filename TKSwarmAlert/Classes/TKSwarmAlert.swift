@@ -72,21 +72,22 @@ open class TKSwarmAlert: NSObject {
             })
             animationView?.willDissmissAllViews = {
                 for v in self.staticViews {
-                    UIView.animate(withDuration: self.fadeOutDuration) {
+                    UIView.animate(withDuration: self.fadeOutDuration, animations: {[unowned self] in
                         v.alpha = 0
-                    }
+                    })
                 }
+                
+                UIView.animate(withDuration: self.fadeOutDuration, animations: {[unowned self] in
+                    self.blurView?.alpha = 0
+                })
             }
             animationView?.didDissmissAllViews = {
-                UIView.animate(withDuration: self.fadeOutDuration) {
-                    self.blurView?.alpha = 0
-                }
                 self.blurView?.removeFromSuperview()
                 self.animationView?.removeFromSuperview()
-                self.didDissmissAllViews?()
                 for staticView in self.staticViews {
                     staticView.alpha = 1
                 }
+                self.didDissmissAllViews?()
             }
         }
     }

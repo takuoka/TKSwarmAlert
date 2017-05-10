@@ -8,13 +8,26 @@
 
 import UIKit
 
+extension CGRect{
+    init(_ x:CGFloat,_ y:CGFloat,_ width:CGFloat,_ height:CGFloat) {
+        self.init(x:x,y:y,width:width,height:height)
+    }
+    
+}
+
+extension CGPoint{
+    init(_ x:CGFloat,_ y:CGFloat) {
+        self.init(x:x,y:y)
+    }
+}
+
 extension CGRect {
     var x: CGFloat {
         get {
             return self.origin.x
         }
         set {
-            self = CGRectMake(newValue, self.minY, self.width, self.height)
+            self = CGRect(newValue, self.minY, self.width, self.height)
         }
     }
     
@@ -23,7 +36,7 @@ extension CGRect {
             return self.origin.y
         }
         set {
-            self = CGRectMake(self.x, newValue, self.width, self.height)
+            self = CGRect(self.x, newValue, self.width, self.height)
         }
     }
     
@@ -32,7 +45,7 @@ extension CGRect {
             return self.size.width
         }
         set {
-            self = CGRectMake(self.x, self.width, newValue, self.height)
+            self = CGRect(self.x, self.width, newValue, self.height)
         }
     }
     
@@ -41,7 +54,7 @@ extension CGRect {
             return self.size.height
         }
         set {
-            self = CGRectMake(self.x, self.minY, self.width, newValue)
+            self = CGRect(self.x, self.minY, self.width, newValue)
         }
     }
     
@@ -60,7 +73,7 @@ extension CGRect {
             return self.origin.y + self.size.height
         }
         set {
-            self = CGRectMake(x, newValue - height, width, height)
+            self = CGRect(x, newValue - height, width, height)
         }
     }
     
@@ -78,7 +91,7 @@ extension CGRect {
             return x + width
         }
         set {
-            self = CGRectMake(newValue - width, y, width, height)
+            self = CGRect(newValue - width, y, width, height)
         }
     }
     
@@ -88,7 +101,7 @@ extension CGRect {
             return self.x + self.width / 2
         }
         set {
-            self = CGRectMake(newValue - width / 2, y, width, height)
+            self = CGRect(newValue - width / 2, y, width, height)
         }
     }
     
@@ -97,17 +110,17 @@ extension CGRect {
             return self.y + self.height / 2
         }
         set {
-            self = CGRectMake(x, newValue - height / 2, width, height)
+            self = CGRect(x, newValue - height / 2, width, height)
         }
     }
     
     
     var center: CGPoint {
         get {
-            return CGPointMake(self.midX, self.midY)
+            return CGPoint(self.midX, self.midY)
         }
         set {
-            self = CGRectMake(newValue.x - width / 2, newValue.y - height / 2, width, height)
+            self = CGRect(newValue.x - width / 2, newValue.y - height / 2, width, height)
         }
     }
 }

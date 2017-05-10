@@ -6,13 +6,12 @@
 //  Copyright (c) 2015年 Uniface. All rights reserved.
 //
 
-
 import UIKit
 
 public enum TKSWBackgroundType {
-    case Blur
-    case BrightBlur
-    case TransparentBlack(alpha: CGFloat)
+    case blur
+    case brightBlur
+    case transparentBlack(alpha: CGFloat)
 }
 
 
@@ -22,32 +21,32 @@ class TKSWBackgroundView: UIView {
     
     let transparentBlackView = UIView()
     var brightView: BrightView?
-
+    
     var blurView: UIVisualEffectView?
-
+    
     
     var blackAlphaForBlur:CGFloat = 0.125
-    var blurDuration: NSTimeInterval = 0.2
+    var blurDuration: TimeInterval = 0.2
     let type: TKSWBackgroundType
-
+    
     init(frame:CGRect, type: TKSWBackgroundType) {
         self.type = type
         super.init(frame:frame)
-        self.hidden = true
+        self.isHidden = true
         
         transparentBlackView.frame = frame
-        transparentBlackView.backgroundColor = UIColor.blackColor()
+        transparentBlackView.backgroundColor = UIColor.black
         transparentBlackView.alpha = 0
         self.addSubview(transparentBlackView)
         
         switch type {
-        case .Blur, .BrightBlur:
-            blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+        case .blur, .brightBlur:
+            blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
             blurView?.frame = frame
             self.addSubview(blurView!)
             blurView?.alpha = 0
             break
-        case .TransparentBlack:
+        case .transparentBlack:
             break
         }
     }
@@ -56,45 +55,45 @@ class TKSWBackgroundView: UIView {
     }
     
     
-    func show(duration duration:NSTimeInterval = 0.2, didEnd:(()->Void)? = nil) {
+    func show(duration:TimeInterval = 0.2, didEnd:(()->Void)? = nil) {
         if duration != 0.2 {
             self.blurDuration = duration
         }
         switch type {
-        case .Blur:
+        case .blur:
             showBlur(didEnd)
-        case .BrightBlur:
+        case .brightBlur:
             showBrightBlur(didEnd)
-        case let .TransparentBlack(alpha):
+        case let .transparentBlack(alpha):
             self.blackAlphaForBlur = alpha
             showTransparentBlack(didEnd)
         }
     }
     
     
-    func showTransparentBlack(didEnd:(()->Void)? = nil) {
-        self.hidden = false
-        UIView.animateWithDuration(blurDuration) {
+    func showTransparentBlack(_ didEnd:(()->Void)? = nil) {
+        self.isHidden = false
+        UIView.animate(withDuration: blurDuration) {
             self.transparentBlackView.alpha = self.blackAlphaForBlur
         }
-        NSTimer.schedule(delay: blurDuration + 0.1) { timer in
+        Timer.schedule(delay: blurDuration + 0.1) { timer in
             didEnd?()
         }
     }
     
-    func showBlur(didEnd:(()->Void)? = nil) {
-        self.hidden = false
+    func showBlur(_ didEnd:(()->Void)? = nil) {
+        self.isHidden = false
         self.blurView?.alpha = 0
-        UIView.animateWithDuration(blurDuration) {
+        UIView.animate(withDuration: blurDuration) {
             self.blurView?.alpha = 1
             self.transparentBlackView.alpha = 0.15
         }
-        NSTimer.schedule(delay: blurDuration + 0.1) { timer in
+        Timer.schedule(delay: blurDuration + 0.1) { timer in
             didEnd?()
         }
     }
     
-    func showBrightBlur(didEnd:(()->Void)? = nil) {
+    func showBrightBlur(_ didEnd:(()->Void)? = nil) {
         self.brightView = BrightView(frame: self.frame, center: CGPoint(x: self.center.x, y: self.center.y))
         self.insertSubview(brightView!, aboveSubview: blurView!)
         showBlur() {
@@ -103,10 +102,3 @@ class TKSWBackgroundView: UIView {
         }
     }
 }
-
-
-
-
-
-
-

@@ -8,89 +8,91 @@
 
 import UIKit
 
-@objc
-public class TKSwarmAlert: NSObject {
-    
-    public var durationOfPreventingTapBackgroundArea: NSTimeInterval = 0
-    public var didDissmissAllViews: ()->Void = {}
+public typealias Closure=()->Void
 
-    private var staticViews: [UIView] = []
+open class TKSwarmAlert: NSObject {
+    
+    open var durationOfPreventingTapBackgroundArea: TimeInterval = 0
+    open var didDissmissAllViews: Closure?
+    
+    open var fadeOutDuration: TimeInterval = 0.2
+    
+    fileprivate var staticViews: [UIView] = []
     var animationView: FallingAnimationView?
     var blurView: TKSWBackgroundView?
-    let type: TKSWBackgroundType
-  
-  
-    public override init() {
-      self.type = TKSWBackgroundType.Blur
-    }
-  
-    public init(backgroundType: TKSWBackgroundType = .Blur) {
-        self.type = backgroundType
+    
+    var type: TKSWBackgroundType!
+    
+    public init(backgroundType: TKSWBackgroundType = .blur) {
         super.init()
+        self.type = backgroundType
     }
     
-    public func addNextViews(views:[UIView]) {
+    open func addNextViews(_ views:[UIView]) {
         self.animationView?.nextViewsList.append(views)
     }
     
-    public func addSubStaticView(view:UIView) {
+    open func addSubStaticView(_ view:UIView) {
         view.tag = -1
         self.staticViews.append(view)
     }
     
-    public func show(views:[UIView]) {
-        let window:UIWindow? = UIApplication.sharedApplication().keyWindow
+    open func hide(){
+        self.animationView?.onTapSuperView()
+    }
+    
+    open func show(_ views:[UIView]) {
+        let window:UIWindow? = UIApplication.shared.keyWindow
         if window != nil {
             let frame:CGRect = window!.bounds
-            blurView = TKSWBackgroundView(frame: frame, type: type)
+            blurView = TKSWBackgroundView(frame: frame, type: self.type)
             animationView = FallingAnimationView(frame: frame)
             
             if durationOfPreventingTapBackgroundArea > 0 {
                 animationView?.enableToTapSuperView = false
-                NSTimer.schedule(delay: durationOfPreventingTapBackgroundArea) { [weak self] _ in
+                Timer.schedule(delay: durationOfPreventingTapBackgroundArea) { [weak self] _ in
                     self?.animationView?.enableToTapSuperView = true
                 }
             }
             
-            let showDuration:NSTimeInterval = 0.2
-
+            let showDuration:TimeInterval = 0.2
+            
             for staticView in staticViews {
                 let originalAlpha = staticView.alpha
                 staticView.alpha = 0
                 animationView?.addSubview(staticView)
-                UIView.animateWithDuration(showDuration) {
+                UIView.animate(withDuration: showDuration) {
                     staticView.alpha = originalAlpha
                 }
             }
             window!.addSubview(blurView!)
             window!.addSubview(animationView!)
-            blurView?.show(duration:showDuration) {
+            blurView?.show(duration: showDuration, didEnd: {[unowned self] () -> Void in
                 self.spawn(views)
-            }
-
+            })
             animationView?.willDissmissAllViews = {
-                let fadeOutDuration:NSTimeInterval = 0.2
                 for v in self.staticViews {
-                    UIView.animateWithDuration(fadeOutDuration) {
+                    UIView.animate(withDuration: self.fadeOutDuration, animations: {[unowned self] in
                         v.alpha = 0
-                    }
+                    })
                 }
-                UIView.animateWithDuration(fadeOutDuration) {
+                
+                UIView.animate(withDuration: self.fadeOutDuration, animations: {[unowned self] in
                     self.blurView?.alpha = 0
-                }
+                })
             }
             animationView?.didDissmissAllViews = {
                 self.blurView?.removeFromSuperview()
                 self.animationView?.removeFromSuperview()
-                self.didDissmissAllViews()
                 for staticView in self.staticViews {
                     staticView.alpha = 1
                 }
+                self.didDissmissAllViews?()
             }
         }
     }
     
-    public func spawn(views:[UIView]) {
-        self.animationView?.spawn(views)
+    open func spawn(_ views:[UIView]) {
+        self.animationView?.spawn(views: views)
     }
 }

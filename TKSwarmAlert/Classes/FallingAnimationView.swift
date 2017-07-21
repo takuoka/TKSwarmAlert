@@ -342,7 +342,7 @@ class FallingAnimationView: UIView {
         return minimumTop
     }
     
-    func distance(from from:CGPoint, to:CGPoint) -> CGFloat {
+    func distance(from:CGPoint, to:CGPoint) -> CGFloat {
         let xDist = (to.x - from.x)
         let yDist = (to.y - from.y)
         return sqrt((xDist * xDist) + (yDist * yDist))

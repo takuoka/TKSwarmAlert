@@ -41,7 +41,7 @@ class BrightView: UIView {
         let path:CGMutablePath = CGMutablePath()
         func makeFanShapedPathDeviedBy18(_ i:Int) {
             let i = i % 18
-            let oneAngle = CGFloat(M_PI) / 9
+            let oneAngle = CGFloat(Double.pi) / 9
             let startAngle = oneAngle * CGFloat(i)
             let endAngle = startAngle + oneAngle
             // make arc
@@ -69,7 +69,7 @@ class BrightView: UIView {
         self.isHidden = false
         let rotate = CABasicAnimation(keyPath: "transform.rotation.z")
         rotate.fromValue = 0
-        rotate.toValue = M_PI * 2
+        rotate.toValue = Double.pi * 2
         rotate.duration = rotateDuration
         rotate.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         rotate.repeatCount = HUGE

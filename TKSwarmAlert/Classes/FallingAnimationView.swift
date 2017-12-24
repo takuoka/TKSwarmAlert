@@ -168,7 +168,7 @@ class FallingAnimationView: UIView {
     }
     
 
-    func didDrag(gesture: UIPanGestureRecognizer) {
+    @objc func didDrag(gesture: UIPanGestureRecognizer) {
         let gestureView = gesture.view!
         if gesture.state == UIGestureRecognizerState.began {
             self.animator.removeAllBehaviors()
@@ -220,7 +220,7 @@ class FallingAnimationView: UIView {
         }
     }
     
-    func onTapSuperView() {
+    @objc func onTapSuperView() {
         if (enableToTapSuperView) {
             animator.removeAllBehaviors()
             disableTapGesture()
@@ -342,7 +342,7 @@ class FallingAnimationView: UIView {
         return minimumTop
     }
     
-    func distance(from from:CGPoint, to:CGPoint) -> CGFloat {
+    func distance(from:CGPoint, to:CGPoint) -> CGFloat {
         let xDist = (to.x - from.x)
         let yDist = (to.y - from.y)
         return sqrt((xDist * xDist) + (yDist * yDist))

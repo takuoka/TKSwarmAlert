@@ -122,7 +122,7 @@ class FallingAnimationView: UIView {
         animationView.center = self.center
         self.addSubview(animationView)
      
-        enableTapGesture()
+//        enableTapGesture()
     }
     
     required init(coder aDecoder: NSCoder) {

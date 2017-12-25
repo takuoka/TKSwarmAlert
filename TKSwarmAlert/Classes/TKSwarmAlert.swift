@@ -23,7 +23,7 @@ open class TKSwarmAlert: NSObject {
     
     var type: TKSWBackgroundType!
     
-    public init(backgroundType: TKSWBackgroundType = .blur) {
+    public init(backgroundType: TKSWBackgroundType) {
         super.init()
         self.type = backgroundType
     }

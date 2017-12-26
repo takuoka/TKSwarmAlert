@@ -47,7 +47,7 @@ class FallingAnimationView: UIView {
 
     
     let gravityMagnitude:CGFloat = 3
-    let snapBackDistance:CGFloat = 30
+    let snapBackDistance:CGFloat = 100
     let fieldMargin:CGFloat = 300
 
     var animator: UIDynamicAnimator
@@ -56,7 +56,7 @@ class FallingAnimationView: UIView {
     var startPoints: [CGPoint] = []
     var currentAnimationViewTags: [Int] = []
     var nextViewsList: [[UIView]] = []
-    
+    var startDragPoint: CGPoint = .zero
     var enableToTapSuperView: Bool = true
     
     var allViews: [UIView] {
@@ -121,15 +121,11 @@ class FallingAnimationView: UIView {
         animationView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width + fieldMargin*2, height: self.frame.size.height + fieldMargin*2)
         animationView.center = self.center
         self.addSubview(animationView)
-     
-//        enableTapGesture()
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
     
     // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -182,6 +178,7 @@ class FallingAnimationView: UIView {
                 gripPoint.y - gestureView.bounds.size.height / 2.0
             )
             let anchorPoint: CGPoint = gesture.location(in: gestureView.superview)
+            startDragPoint = anchorPoint
             attachmentBehavior = UIAttachmentBehavior(item: gestureView, offsetFromCenter: offsetFromCenter, attachedToAnchor: anchorPoint)
             self.animator.addBehavior(attachmentBehavior!)
         }
@@ -196,7 +193,7 @@ class FallingAnimationView: UIView {
             collisionAll()
             // judge if fall
             let touchPoint: CGPoint = gesture.location(in: gestureView.superview)
-            let movedDistance = distance(from: startPoints[gestureView.tag], to: touchPoint)
+            let movedDistance = distance(from: startDragPoint, to: touchPoint)
             if movedDistance < snapBackDistance {// not fall
                 let snap = UISnapBehavior(item: gestureView, snapTo: startPoints[gestureView.tag])
                 self.animator.addBehavior(snap)
@@ -214,7 +211,7 @@ class FallingAnimationView: UIView {
                     self.animator.addBehavior(pushBehavior)
                     
                     disableDragGesture()
-                    fallAndRemoveAll()
+                    onTapSuperView()
                 }
             }
         }

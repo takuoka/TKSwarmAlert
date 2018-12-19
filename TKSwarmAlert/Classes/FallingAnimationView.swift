@@ -168,29 +168,29 @@ class FallingAnimationView: UIView {
     }
     
 
-    func didDrag(gesture: UIPanGestureRecognizer) {
+    @objc func didDrag(gesture: UIPanGestureRecognizer) {
         let gestureView = gesture.view!
-        if gesture.state == UIGestureRecognizerState.began {
+        if gesture.state == UIGestureRecognizer.State.began {
             self.animator.removeAllBehaviors()
             collisionAll()
             snapAll()
             fallAndRemove(views: unCurrentAnimationViews)
             // drag start
             let gripPoint: CGPoint = gesture.location(in: gestureView)
-            let offsetFromCenter: UIOffset = UIOffsetMake(
-                gripPoint.x - gestureView.bounds.size.width  / 2.0,
-                gripPoint.y - gestureView.bounds.size.height / 2.0
+            let offsetFromCenter: UIOffset = UIOffset.init(
+                horizontal: gripPoint.x - gestureView.bounds.size.width  / 2.0,
+                vertical: gripPoint.y - gestureView.bounds.size.height / 2.0
             )
             let anchorPoint: CGPoint = gesture.location(in: gestureView.superview)
             attachmentBehavior = UIAttachmentBehavior(item: gestureView, offsetFromCenter: offsetFromCenter, attachedToAnchor: anchorPoint)
             self.animator.addBehavior(attachmentBehavior!)
         }
-        else if gesture.state == UIGestureRecognizerState.changed {
+        else if gesture.state == UIGestureRecognizer.State.changed {
             // drag move
             let touchPoint: CGPoint = gesture.location(in: gestureView.superview)
             attachmentBehavior?.anchorPoint = touchPoint
         }
-        else if gesture.state == UIGestureRecognizerState.ended {
+        else if gesture.state == UIGestureRecognizer.State.ended {
             disableTapGesture()
             self.animator.removeAllBehaviors()
             collisionAll()
@@ -207,7 +207,7 @@ class FallingAnimationView: UIView {
                 }
                 else {// fall
                     // velocity
-                    let pushBehavior = UIPushBehavior(items: [gestureView], mode: UIPushBehaviorMode.instantaneous)
+                    let pushBehavior = UIPushBehavior(items: [gestureView], mode: UIPushBehavior.Mode.instantaneous)
                     let velocity: CGPoint = gesture.velocity(in: gestureView.superview)
                     // not sure if I can really just convert it to CGVector though
                     pushBehavior.pushDirection = CGVector(dx: (velocity.x / 900), dy: (velocity.y / 900))
@@ -220,7 +220,7 @@ class FallingAnimationView: UIView {
         }
     }
     
-    func onTapSuperView() {
+    @objc func onTapSuperView() {
         if (enableToTapSuperView) {
             animator.removeAllBehaviors()
             disableTapGesture()
@@ -342,7 +342,7 @@ class FallingAnimationView: UIView {
         return minimumTop
     }
     
-    func distance(from from:CGPoint, to:CGPoint) -> CGFloat {
+    func distance(from:CGPoint, to:CGPoint) -> CGFloat {
         let xDist = (to.x - from.x)
         let yDist = (to.y - from.y)
         return sqrt((xDist * xDist) + (yDist * yDist))

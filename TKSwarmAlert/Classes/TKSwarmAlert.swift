@@ -72,7 +72,7 @@ open class TKSwarmAlert: NSObject {
             })
             animationView?.willDissmissAllViews = {
                 for v in self.staticViews {
-                    UIView.animate(withDuration: self.fadeOutDuration, animations: {[unowned self] in
+                    UIView.animate(withDuration: self.fadeOutDuration, animations: {
                         v.alpha = 0
                     })
                 }

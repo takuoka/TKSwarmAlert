@@ -38,7 +38,7 @@ class SampleDesignView: UIView {
         
         if icon != nil {
             let iconView = UIImageView(image: icon)
-            iconView.contentMode = UIViewContentMode.center
+            iconView.contentMode = UIView.ContentMode.center
             iconView.frame = CGRect(x: margin, y: 0, width: self.frame.height, height: self.frame.height)
             self.addSubview(iconView)
         }

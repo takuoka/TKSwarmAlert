@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1058293B1DC1DB2E003A63B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1058293A1DC1DB2E003A63B0 /* Default-568h@2x.png */; };
 		B00FB0591C0C0D810085EEF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00FB04A1C0C0D810085EEF5 /* Images.xcassets */; };
 		B00FB0661C0C0E300085EEF5 /* TKSwarmAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = B00FB0651C0C0E300085EEF5 /* TKSwarmAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B00FB06A1C0C0E300085EEF5 /* TKSwarmAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FB0631C0C0E300085EEF5 /* TKSwarmAlert.framework */; };
@@ -25,6 +24,7 @@
 		B00FB07B1C0C0E910085EEF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB04E1C0C0D810085EEF5 /* ViewController.swift */; };
 		B00FB07D1C0C0F0C0085EEF5 /* someExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00FB07C1C0C0F0C0085EEF5 /* someExtensions.swift */; };
 		B0EF79DE1C0C12EF0087E857 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00FB0461C0C0D810085EEF5 /* LaunchScreen.xib */; };
+		DB6B34D321CAAC3300208F2D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6B34D221CAAC3300208F2D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1058293A1DC1DB2E003A63B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B00FB0261C0C0D470085EEF5 /* TKSwarmAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKSwarmAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00FB03C1C0C0D810085EEF5 /* BrightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightView.swift; sourceTree = "<group>"; };
 		B00FB03D1C0C0D810085EEF5 /* FallingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingAnimationView.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		B00FB0651C0C0E300085EEF5 /* TKSwarmAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKSwarmAlert.h; sourceTree = "<group>"; };
 		B00FB0671C0C0E300085EEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00FB07C1C0C0F0C0085EEF5 /* someExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = someExtensions.swift; sourceTree = "<group>"; };
+		DB6B34D221CAAC3300208F2D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		B00FB01D1C0C0D470085EEF5 = {
 			isa = PBXGroup;
 			children = (
-				1058293A1DC1DB2E003A63B0 /* Default-568h@2x.png */,
+				DB6B34D221CAAC3300208F2D /* Default-568h@2x.png */,
 				B00FB0281C0C0D470085EEF5 /* TKSwarmAlertExample */,
 				B00FB0641C0C0E300085EEF5 /* TKSwarmAlert */,
 				B00FB0271C0C0D470085EEF5 /* Products */,
@@ -225,16 +225,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "岡本拓也";
 				TargetAttributes = {
 					B00FB0251C0C0D470085EEF5 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1010;
 					};
 					B00FB0621C0C0E300085EEF5 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -264,7 +264,7 @@
 			files = (
 				B0EF79DE1C0C12EF0087E857 /* LaunchScreen.xib in Resources */,
 				B00FB0591C0C0D810085EEF5 /* Images.xcassets in Resources */,
-				1058293B1DC1DB2E003A63B0 /* Default-568h@2x.png in Resources */,
+				DB6B34D321CAAC3300208F2D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,14 +334,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -381,14 +389,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -419,12 +435,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlertExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -433,12 +451,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TKSwarmAlert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlertExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -458,7 +478,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -480,7 +501,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twitter.tk-365.TKSwarmAlert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

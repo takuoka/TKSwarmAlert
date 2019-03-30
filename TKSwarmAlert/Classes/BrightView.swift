@@ -71,9 +71,9 @@ class BrightView: UIView {
         rotate.fromValue = 0
         rotate.toValue = Double.pi * 2
         rotate.duration = rotateDuration
-        rotate.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        rotate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         rotate.repeatCount = HUGE
-        rotate.fillMode = kCAFillModeForwards
+        rotate.fillMode = CAMediaTimingFillMode.forwards
         rotate.isRemovedOnCompletion
             = false
         self.shapeLayer.add(rotate, forKey: rotate.keyPath)
